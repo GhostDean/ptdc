@@ -1,0 +1,7 @@
+/// scrChangeImage(sprite_index,image_speed)
+if sprite_index != argument0
+{
+    sprite_index = argument0;
+    image_index = 0;
+    image_speed = argument1;
+}
