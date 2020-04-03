@@ -184,6 +184,7 @@
       <sprite>sprites\sprSlideBlockR</sprite>
       <sprite>sprites\sprSlideBlockL</sprite>
       <sprite>sprites\sprSaveBlocker</sprite>
+      <sprite>sprites\sprDemoBlock</sprite>
     </sprites>
     <sprites name="slopes">
       <sprite>sprites\sprSlopeBlock</sprite>
@@ -1221,6 +1222,7 @@
         <background>background\bgSP00</background>
       </backgrounds>
     </backgrounds>
+    <background>background\bgDemoThanks</background>
   </backgrounds>
   <paths name="paths">
     <paths name="QPath">
@@ -1613,6 +1615,7 @@
       <object>objects\objSlideBlockR</object>
       <object>objects\objBossBlock</object>
       <object>objects\objSaveBlocker</object>
+      <object>objects\objDemoBlock</object>
     </objects>
     <objects name="slopes">
       <object>objects\objSlope</object>
@@ -1698,8 +1701,6 @@
       <object>objects\objBossIndicator</object>
       <object>objects\objGameClear</object>
       <object>objects\objSecretBlockSecond</object>
-      <object>objects\objSecretItemSecond</object>
-      <object>objects\objSecretIndicatorSecond</object>
     </objects>
     <objects name="QObj">
       <objects name="QMap">

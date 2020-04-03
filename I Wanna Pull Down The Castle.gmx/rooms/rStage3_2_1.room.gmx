@@ -365,7 +365,8 @@
     <instance objName="objBlock" x="960" y="0" name="inst_01908BAD" locked="0" code="" scaleX="20" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="768" y="0" name="inst_1EE718F5" locked="0" code="" scaleX="6" scaleY="3.09677410125732" colour="4294967295" rotation="0"/>
     <instance objName="objWarp" x="704" y="-32" name="inst_CAA5DAC4" locked="0" code="image_xscale = 2;&#xA;roomTo = rStage3_hidden;&#xA;warpX = 0&#xA;warpY = 576" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSecretBlockSecond" x="704" y="0" name="inst_3B071E48" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="objSecretBlockSecond" x="496" y="-96" name="inst_3B071E48" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="objBlock" x="704" y="0" name="inst_9A131563" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="qBGS3Block" x="64" y="32" w="32" h="32" xo="0" yo="64" id="10109892" name="inst_1D7DC0B6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -1631,6 +1632,12 @@
     <tile bgName="qBGS3Block" x="1024" y="1200" w="32" h="32" xo="0" yo="32" id="10111281" name="inst_29F3ACF9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="qBGS3Block" x="1024" y="1232" w="32" h="32" xo="0" yo="32" id="10111283" name="inst_EAB09BC7" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="qBGS3Block" x="928" y="1472" w="32" h="32" xo="0" yo="0" id="10111284" name="inst_8ED734AE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="qBGS3Block" x="704" y="0" w="32" h="32" xo="0" yo="32" id="10175859" name="inst_E22EFF5F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="qBGS3Block" x="736" y="0" w="32" h="32" xo="0" yo="32" id="10175860" name="inst_39689724" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="qBGS3Block" x="704" y="32" w="32" h="32" xo="0" yo="32" id="10175861" name="inst_A4554DEC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="qBGS3Block" x="736" y="32" w="32" h="32" xo="0" yo="32" id="10175862" name="inst_97A06A89" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="qBGS3Block" x="704" y="64" w="32" h="32" xo="0" yo="32" id="10175863" name="inst_E6EEDF53" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="qBGS3Block" x="736" y="64" w="32" h="32" xo="0" yo="32" id="10175864" name="inst_D8CF6B81" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

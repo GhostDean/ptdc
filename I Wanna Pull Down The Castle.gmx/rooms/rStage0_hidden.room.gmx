@@ -61,7 +61,6 @@
     <instance objName="objBlock" x="0" y="0" name="inst_586D784C" locked="0" code="" scaleX="24" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="0" y="32" name="inst_79A3EB03" locked="0" code="" scaleX="1" scaleY="17" colour="4294967295" rotation="0"/>
     <instance objName="objSave" x="704" y="544" name="inst_E285D957" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSecretItemSecond" x="128" y="352" name="inst_CA2273D0" locked="0" code="scrInitItem(0, '', '', 0, 0, sprSecretItemI);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="32" y="448" name="inst_843F8D26" locked="0" code="" scaleX="8" scaleY="4" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>

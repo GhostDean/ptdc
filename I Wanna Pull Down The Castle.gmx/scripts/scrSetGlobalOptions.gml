@@ -1,10 +1,10 @@
 ///sets configurable global options
 
-global.debugMode = 1;       //enables debug keys (check objWorld step to see all of them), make sure to set this to "false" before releasing your game
-global.debugVisuals = 1;    //enables changing the color/alpha of player when infjump/god mode are toggled, make sure to disable this if you want to change the player's image_alpha or image_blend
-global.debugOverlay = 1;    //enables showing the debug text overlay (shows player location, align, etc.)
-global.debugNoDeath = 1;    //enables god mode (toggle with Home key)
-global.debugInfJump = 1;    //enables infinite jump (toggle with End key)
+global.debugMode = 0;       //enables debug keys (check objWorld step to see all of them), make sure to set this to "false" before releasing your game
+global.debugVisuals = 0;    //enables changing the color/alpha of player when infjump/god mode are toggled, make sure to disable this if you want to change the player's image_alpha or image_blend
+global.debugOverlay = 0;    //enables showing the debug text overlay (shows player location, align, etc.)
+global.debugNoDeath = 0;    //enables god mode (toggle with Home key)
+global.debugInfJump = 0;    //enables infinite jump (toggle with End key)
 global.debugShowHitbox = 0; //enables showing the player's hitbox (toggle with Del key)
 
 global.roomCaptionDef = "I Wanna Pull Down The Castle";  //sets default window caption (only works with the Professional version of Studio)
@@ -13,7 +13,7 @@ window_set_caption(global.roomCaptionDef);
 
 global.md5StrAdd = "Put something here";  //sets what to add to the end of md5 input string to make the save harder to mess with, can be changed to anything, should be set to something unique and hard to predict (like setting a password)
 
-global.startRoom = rStageDLC_SavePeach;//0_1;    //sets which room to begin with
+global.startRoom = rStage0_1;    //sets which room to begin with
 
 global.menuMode = 1;            //sets whether to use a warp room or a menu for selecting the game's difficulty (0 = warp room, 1 = menu)
 global.menuSound = sndJump;     //sets what sound to use for navigating the main menu
@@ -26,7 +26,7 @@ global.delayBow = false;            //sets whether to delay the player bow's mov
 global.directionalTapFix = false;    //sets whether to change the behavior of tapping left/right for less than 1 frame (by default the player does not move when this happens, enabling this always moves the player for 1 frame when left/right is tapped)
 global.playerAnimationFix = false;  //sets whether to fix the weird player animation inconsistencies when moving around
 
-global.secretItemTotal = 13;     //sets how many secret items for the game to save/load
+global.secretItemTotal = 8;     //sets how many secret items for the game to save/load
 global.bossItemTotal = 10;       //sets how many boss items for the game to save/load
 global.autosaveSecretItems = false; //sets whether to save secret items immediately when you grab them or if you have to hit a save
 
