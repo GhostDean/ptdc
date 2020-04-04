@@ -148,7 +148,7 @@ else
     {
         if (image_index &gt;= 9 &amp;&amp; image_index &lt; 10) &amp;&amp; !shot
         {
-            with instance_create(x+25*image_xscale,y-31,obj_skArcherArrow)
+            with instance_create(x+5*image_xscale,y-31,obj_skArcherArrow)
             {
                 direction = scrLookAtPlayer();
                 image_angle = direction;

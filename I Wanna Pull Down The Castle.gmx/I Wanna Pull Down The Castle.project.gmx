@@ -2420,6 +2420,7 @@
       </objects>
       <object>objects\obj_itemObtain</object>
       <object>objects\obj_bossHpBar</object>
+      <object>objects\obj_cutscene</object>
     </objects>
     <objects name="Stage8">
       <object>objects\objSphereLight</object>
