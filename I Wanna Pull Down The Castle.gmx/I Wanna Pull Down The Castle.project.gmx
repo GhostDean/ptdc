@@ -512,6 +512,7 @@
           <sprite>sprites\sprSkWarriorNormalIdle</sprite>
           <sprite>sprites\sprSkWarriorNormalWalk</sprite>
           <sprite>sprites\sprSkWarriorNormalAttack</sprite>
+          <sprite>sprites\sprSkWarriorNormalReady</sprite>
           <sprite>sprites\sprSkWarriorNormalBlock</sprite>
           <sprite>sprites\sprSkWarriorNormalDamaged</sprite>
           <sprite>sprites\sprSkWarriorNormalDead</sprite>
@@ -531,6 +532,9 @@
           <sprite>sprites\sprSkWarriorFrostBlock</sprite>
           <sprite>sprites\sprSkWarriorFrostDamaged</sprite>
           <sprite>sprites\sprSkWarriorFrostDead</sprite>
+        </sprites>
+        <sprites name="Elite">
+          <sprite>sprites\sprSkWarriorEliteSword</sprite>
         </sprites>
         <sprite>sprites\sprSkWarriorNormalMask</sprite>
         <sprite>sprites\sprSkWarriorAttackMask</sprite>
@@ -2225,6 +2229,8 @@
         <object>objects\obj_wormBullet</object>
         <object>objects\obj_hellBeastFireball</object>
         <object>objects\obj_demonBreath</object>
+        <object>objects\obj_skWarriorSword</object>
+        <object>objects\obj_skWarriorSummonSword</object>
       </objects>
       <objects name="effect">
         <object>objects\obj_slimeEffect</object>

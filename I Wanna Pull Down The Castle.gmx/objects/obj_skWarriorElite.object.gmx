@@ -39,39 +39,54 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = .1;
-gravity = .4;
+            <string>mask = instance_create(x, y, obj_movementMask);
+mask.sprite_index = sprSkWarriorNormalMask;
+mask.image_xscale = 1.5;
+mask.image_yscale = 1.5;
+
+image_speed = .1;
+mask.gravity = .4;
 
 hp = 25;
 skWarriorIdle = sprSkWarriorNormalIdle;
 skWarriorWalk = sprSkWarriorNormalWalk;
 skWarriorAttack = sprSkWarriorNormalAttack;
-skWarriorBlock = sprSkWarriorNormalBlock;
 skWarriorDamaged = sprSkWarriorNormalDamaged;
 skWarriorDead = sprSkWarriorNormalDead;
+skWarriorSpell = sprSkWarriorNormalReady;
 
 radius = 0;
 rectOffsetY = 50;
 rectWidth = 200;
 rectHeight = 60;
 
+// 攻击模式一览
+// 0: 加速到攻击范围，走路有残影，挥刀攻击
+// 1: 举起刀，召唤剑攻击，持续5秒
+// 2: 隐身，过2秒移动到玩家位置，攻击。第1.8秒透明度从0
+// 变成0.3
+// 3: 在随机位置召唤一把剑（地上），剑每隔5秒会在顶端
+// 召唤一把剑，锁定player，等待3秒后攻击，地上的剑血量
+// 为4，最多存在3把召唤剑
+curAttackMode = -1;
+
+effectTimer = 0;
+
+spellOn = 0;
+spellTimer = 0;
+
+invisible = 0;
+invisibleTimer = 0;
+invX = 0;
+invY = 0;
+
 attacking = false;
-attackRange = 50; // radius
+attackRange = 70; // radius
 damaged = false;
 
-patrol = false;
-patrolDir = 1;
-
 moveSpeed = 1.5;
-blocking = false;
-blockTime = 50; // 50 steps = 1 sec
-blockTimer = 0;
-blockInterval = 15 * 50;
-blockIntervalTimer = 0;
 
 image_xscale = 1.5; image_yscale = 1.5;
-
-alarm[0] = 1;
 </string>
           </argument>
         </arguments>
@@ -94,12 +109,60 @@ alarm[0] = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if patrol
+            <string>/// Decide next action
+mask.hspeed = 0;
+curAttackMode = irandom(3);
+
+if curAttackMode == 3 &amp;&amp; instance_number(obj_skWarriorSummonSword) == 3
 {
-    scrChangeImage(skWarriorWalk, .2);
-    image_xscale = patrolDir;
-    hspeed = moveSpeed * patrolDir;
+    curAttackMode = irandom(2);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scrSyncPosWithMask();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scrSyncPosWithMask();
 </string>
           </argument>
         </arguments>
@@ -139,59 +202,113 @@ alarm[0] = 1;
             <string>if damaged return -1;
 if attacking return -1;
 if hp == 0 return -1;
+if !scrCheckPlayerExists() exit;
 
-if active
+if !active
 {
-    if blocking
-    {
-        if hspeed != 0 hspeed = 0;
-        blockTimer--;
-        if blockTimer == 0
-        {
-            scrChangeImage(skWarriorIdle, .1);
-            blocking = false;
-            blockIntervalTimer = blockInterval;
-        }
-    }
-    else
-    {
-        if sprite_index == skWarriorBlock return -1;
-        scrFollowPlayerDirecton();
-        image_xscale = sign(image_xscale) * 1.5;
-        scrBasicEnemyMovement(moveSpeed);
-        scrChangeImage(skWarriorWalk, .2);
-        if scrPlayerDistance() &lt;= attackRange
-        {
-            hspeed = 0;
-            attacking = 1;
-            scrChangeImage(skWarriorAttack, .6);
-        }
-    }
+    scrFollowPlayerDirecton();
+    image_xscale = sign(image_xscale) * 1.5;
+    scrChangeImage(skWarriorIdle, .1);
+    active = scrPlayerInRectangle(x,y-rectOffsetY,rectWidth*image_xscale,rectHeight);
 }
 else
 {
-    if patrol
+    if curAttackMode == -1
     {
-        if hspeed == 0
-        {
-            hspeed = moveSpeed * image_xscale;
-            sprite_index = skWarriorWalk;
-            image_speed = .2;
-        }
+        curAttackMode = irandom(3);
     }
     else
     {
-        scrFollowPlayerDirecton();
-        image_xscale = sign(image_xscale) * 1.5;
-        if sprite_index != skWarriorIdle
+        switch curAttackMode
         {
-            sprite_index = skWarriorIdle;
-            image_index = 0;
-            image_speed = .1;
+            case 0:
+                var _dist = scrPlayerDistance();
+                if _dist &lt; attackRange &amp;&amp; sprite_index != skWarriorAttack
+                {
+                    attacking = true;
+                    mask.hspeed = 0;
+                    scrChangeImage(skWarriorAttack, .8);
+                }
+                else
+                {
+                    scrFollowPlayerDirecton();
+                    image_xscale = sign(image_xscale) * 1.5;
+                    scrBasicEnemyMovement(moveSpeed * 2);
+                    scrChangeImage(skWarriorWalk, .2);
+                }
+                break;
+            case 1:
+                scrChangeImage(skWarriorSpell, .1);
+                if spellOn
+                {
+                    spellTimer++;
+                    if spellTimer &gt;= 250
+                    {
+                        spellTimer = 0;
+                        spellOn = 0;
+                        curAttackMode = -1;
+                        scrChangeImage(skWarriorIdle, .1);
+                        alarm[0] = irandom_range(10, 30);
+                    }
+                    if spellTimer mod 10 == 0
+                    {
+                        instance_create(random_range(160,640), 288, obj_skWarriorSword);
+                    }
+                }
+                break;
+            case 2:
+                if !invisible
+                {
+                    scrChangeImage(skWarriorSpell, .1);
+                }
+                else
+                {
+                    invisibleTimer++;
+                    if image_alpha &gt; 0 &amp;&amp; invisibleTimer &lt; 140
+                    {
+                        image_alpha -= .1;
+                        if image_alpha == 0
+                        {
+                            mask.x = 1;
+                            mask.y = 1;
+                        }
+                    }
+                    if invisibleTimer == 90
+                    {
+                        invX = objPlayer.x;
+                        invY = objPlayer.y;
+                        with instance_create(invX, invY, obj_shadow)
+                        {
+                            scrFollowPlayerDirecton();
+                            image_xscale *= 1.5;
+                            type = 0;
+                            sprite_index = other.skWarriorSpell;
+                            image_index = 3;
+                            image_speed = 0;
+                            image_alpha = .3;
+                            depth = -100;
+                        }
+                    }
+                    if invisibleTimer == 100
+                    {
+                        scrFollowPlayerDirecton();
+                        image_xscale = sign(image_xscale) * 1.5;
+                        image_alpha = 1;
+                        mask.x = invX;
+                        mask.y = invY;
+                        scrChangeImage(skWarriorAttack, .8);
+                        image_index = 3;
+                    }
+                }
+                break;
+            case 3:
+                scrChangeImage(skWarriorSpell, .1);
+                break;
+            default:
+                mask.hspeed = 0;
+                scrChangeImage(skWarriorIdle, .1);
         }
     }
-    active = scrPlayerInRectangle(x,y-rectOffsetY,rectWidth*image_xscale,rectHeight);
-    if active patrol = false;
 }
 </string>
           </argument>
@@ -213,13 +330,11 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if blockIntervalTimer &gt; 0 blockIntervalTimer--;
+            <string>scrSyncPosWithMask();
 </string>
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="4" ename="obj_collideWall">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -236,34 +351,22 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if patrol
+            <string>/// Effect
+switch curAttackMode
 {
-    image_xscale *= -1;
-    hspeed *= -1;
+    case 0:
+        if effectTimer == 0
+        {
+            effectTimer = 2;
+            scrCreateShadow(0, image_blend);
+        }
+        break;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objBlock">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>scrEnemyCollision();
+
+if effectTimer &gt; 0
+{
+    effectTimer--;
+}
 </string>
           </argument>
         </arguments>
@@ -287,28 +390,8 @@ else
           <argument>
             <kind>1</kind>
             <string>if !active return -1;
-
-if blocking
-{
-    if image_xscale == -1
-    {
-        if other.x &gt;= x event_inherited();
-    }
-    else if image_xscale == 1
-    {
-        if other.x &lt;= x event_inherited();
-    }
-    with other instance_destroy();
-}
-else
-{
-    event_inherited();
-    if blockTimer == 0 &amp;&amp; blockIntervalTimer == 0
-    {
-        hspeed = 0;
-        scrChangeImage(skWarriorBlock, .4);
-    }
-}
+if invisible return -1;
+event_inherited();
 </string>
           </argument>
         </arguments>
@@ -355,29 +438,48 @@ else
           <argument>
             <kind>1</kind>
             <string>if sprite_index == skWarriorDead instance_destroy();
-else if sprite_index == skWarriorBlock
-{
-    if !blocking &amp;&amp; blockIntervalTimer == 0
-    {
-        blocking = 1;
-        blockTimer = blockTime;
-        image_index = 11;
-        image_speed = 0;
-    }
-}
 else if sprite_index == skWarriorDamaged
 {
     damaged = false;
 }
 else if sprite_index == skWarriorAttack
 {
-    if scrPlayerDistance() &lt;= attackRange
+    if curAttackMode == 2
     {
-        sprite_index = skWarriorAttack;
+        image_alpha = 1;
+        invisible = 0;
+        invisibleTimer = 0;
+        invX = 0;
+        invY = 0;
     }
-    else
+    mask.hspeed = 0;
+    curAttackMode = -1;
+    attacking = false;
+    alarm[0] = irandom_range(10, 30);
+}
+else if sprite_index == skWarriorSpell
+{
+    switch curAttackMode
     {
-        attacking = false;
+        case 1:
+            image_index = 3;
+            image_speed = 0;
+            if !spellOn
+            {
+                spellOn = 1;
+            }
+            break;
+        case 2:
+            image_index = 3;
+            image_speed = 0;
+            invisible = 1;
+            break;
+        case 3:
+            curAttackMode = -1;
+            alarm[0] = random_range(10, 30);
+            audio_play_sound(sndBlockChange, 0, 0);
+            instance_create(random_range(128, 640), 480, obj_skWarriorSummonSword);
+            break;
     }
 }
 </string>
