@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>obj_enemy</parentName>
-  <maskName>sprSkWarriorNormalMask</maskName>
+  <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -39,9 +39,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>mask_index = sprSkWarriorNormalMask;
+            <string>mask = instance_create(x, y, obj_movementMask);
+mask.depth = depth - 1;
+
+mask.sprite_index = sprSkWarriorNormalMask;
+
 image_speed = .1;
-gravity = .4;
+mask.gravity = .4;
 
 hp = 11;
 skWarriorIdle = -1;
@@ -97,8 +101,54 @@ alarm[0] = 1;
 {
     scrChangeImage(skWarriorWalk, .2);
     image_xscale = patrolDir;
-    hspeed = moveSpeed * patrolDir;
+    mask.hspeed = moveSpeed * patrolDir;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scrSyncPosWithMask();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scrSyncPosWithMask();
 </string>
           </argument>
         </arguments>
@@ -139,16 +189,17 @@ alarm[0] = 1;
 if attacking return -1;
 if hp == 0 return -1;
 
-gravity = .4;
-mask_index = sprSkWarriorNormalMask;
+mask.sprite_index = sprSkWarriorNormalMask;
+mask.gravity = .4;
 
 if active
 {
+    scrFollowPlayerDirecton();
     if blocking
     {
-        if hspeed != 0 hspeed = 0;
+        if mask.hspeed != 0 mask.hspeed = 0;
         blockTimer--;
-        if blockTimer == 0
+        if blockTimer &lt;= 0
         {
             scrChangeImage(skWarriorIdle, .1);
             blocking = false;
@@ -158,21 +209,25 @@ if active
     else
     {
         if sprite_index == skWarriorBlock return -1;
-        scrFollowPlayerDirecton();
         scrBasicEnemyMovement(moveSpeed);
         scrChangeImage(skWarriorWalk, .2);
-        if gravity == 0
+        if mask.gravity == 0
         {
-            gravity = .4;
+            mask.gravity = .4;
         }
-        if scrPlayerDistance() &lt;= attackRange
+        var _onGround;
+        with mask
         {
-            hspeed = 0;
+            _onGround = scrCheckOnGround();
+        }
+        if _onGround &amp;&amp; scrPlayerDistance() &lt;= attackRange
+        {
+            mask.hspeed = 0;
             attacking = 1;
             scrChangeImage(skWarriorAttack, .3);
-            mask_index = sprSkWarriorAttackMask;
-            gravity = 0;
-            vspeed = 0;
+            //mask.sprite_index = sprSkWarriorAttackMask;
+            mask.gravity = 0;
+            mask.vspeed = 0;
         }
     }
 }
@@ -181,16 +236,16 @@ else
     scrFollowPlayerDirecton();
     if patrol
     {
-        if hspeed == 0
+        if mask.hspeed == 0
         {
-            hspeed = moveSpeed * image_xscale;
+            mask.hspeed = moveSpeed * image_xscale;
             sprite_index = skWarriorWalk;
             image_speed = .2;
         }
     }
     else
     {
-        if hspeed != 0 hspeed = 0;
+        if mask.hspeed != 0 mask.hspeed = 0;
         if sprite_index != skWarriorIdle
         {
             sprite_index = skWarriorIdle;
@@ -222,6 +277,8 @@ else
           <argument>
             <kind>1</kind>
             <string>if blockIntervalTimer &gt; 0 blockIntervalTimer--;
+
+scrSyncPosWithMask();
 </string>
           </argument>
         </arguments>
@@ -247,31 +304,8 @@ else
             <string>if patrol
 {
     image_xscale *= -1;
-    hspeed *= -1;
+    mask.hspeed *= -1;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objBlock">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>scrEnemyCollision();
 </string>
           </argument>
         </arguments>
@@ -298,14 +332,6 @@ else
 
 if blocking
 {
-    if image_xscale == -1
-    {
-        if other.x &gt;= x event_inherited();
-    }
-    else if image_xscale == 1
-    {
-        if other.x &lt;= x event_inherited();
-    }
     with other instance_destroy();
 }
 else
@@ -313,7 +339,7 @@ else
     event_inherited();
     if blockTimer == 0 &amp;&amp; blockIntervalTimer == 0
     {
-        hspeed = 0;
+        mask.hspeed = 0;
         scrChangeImage(skWarriorBlock, .4);
     }
 }
@@ -341,9 +367,10 @@ else
             <kind>1</kind>
             <string>scrChangeImage(skWarriorDead, .3);
 mask_index = sprMaskNothing;
-gravity = 0;
-vspeed = 0;
-hspeed = 0;
+mask.sprite_index = sprMaskNothing;
+mask.gravity = 0;
+mask.vspeed = 0;
+mask.hspeed = 0;
 </string>
           </argument>
         </arguments>

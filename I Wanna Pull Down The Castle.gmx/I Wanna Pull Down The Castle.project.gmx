@@ -1501,6 +1501,8 @@
       <script>scripts\scrCreateShadow.gml</script>
       <script>scripts\scrLookAtPlayer.gml</script>
       <script>scripts\scrBasicEnemyMovement.gml</script>
+      <script>scripts\scrCheckOnGround.gml</script>
+      <script>scripts\scrSyncPosWithMask.gml</script>
     </scripts>
     <scripts name="_FUNCTION">
       <script>scripts\scrCreateShadow2.gml</script>
@@ -2212,6 +2214,7 @@
         <object>objects\obj_skeletonWarrior</object>
         <object>objects\obj_enemy</object>
         <object>objects\obj_enemyElite</object>
+        <object>objects\obj_movementMask</object>
       </objects>
       <objects name="bullets">
         <object>objects\obj_pumpkinHead</object>
