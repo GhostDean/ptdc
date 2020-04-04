@@ -104,6 +104,7 @@ with objSpikeDown instance_destroy();
 with objSpikeUp instance_destroy();
 global.bossItem[1] = 1;
 ds_list_destroy(castSpikePos);
+global.noPause = 0;
 </string>
           </argument>
         </arguments>
@@ -463,6 +464,7 @@ for (var i = 0; i &lt; 20; i++)
     audio_stop_sound(musBlueKnight);
 }
 ds_list_destroy(castSpikePos);
+global.noPause = 0;
 </string>
           </argument>
         </arguments>

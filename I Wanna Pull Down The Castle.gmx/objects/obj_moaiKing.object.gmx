@@ -304,6 +304,7 @@ if !active
 {
     if keyboard_check_pressed(vk_up) &amp;&amp; place_meeting(x, y, objPlayer)
     {
+        global.noPause = 1;
         audio_play_sound(musMoaiKing, 0, 1);
         image_speed = .2;
         active = 1;
@@ -687,6 +688,7 @@ else
     vspeed = 0;
     alarm[0] = -1;
     scrChangeImage(sprMoaiKingDead, .1);
+    global.noPause = 0;
 }
 with other instance_destroy();
 </string>
@@ -812,6 +814,7 @@ alarm[0] = irandom_range(30, 50);
           <argument>
             <kind>1</kind>
             <string>event_user(15);
+global.noPause = 0;
 </string>
           </argument>
         </arguments>

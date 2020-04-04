@@ -85,6 +85,7 @@ instance_destroy();
             <kind>1</kind>
             <string>if !triggered
 {
+    global.noPause = 1;
     triggered = 1;
     with instance_create(0, 0, obj_mkEffect)
     {

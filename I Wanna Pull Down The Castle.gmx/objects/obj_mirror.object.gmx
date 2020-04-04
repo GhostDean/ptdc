@@ -31,31 +31,8 @@ skipAlp = 0;
 skipPressed = 0;
 timer = 0;
 surf = surface_create(abs(sprite_width), abs(sprite_height));
+bossStart = 0;
 image_speed = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="1" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if surface_exists(surf) surface_free(surf);
-with objSave instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -92,7 +69,9 @@ with instance_create(x, y, obj_mirroredKid)
 //with instance_create(32, 512, obj_mkGateSpike) up = 1;
 with instance_create(352, 320, objSpikeRight) image_xscale = 1.5;
 with instance_create(400, 320, objSpikeLeft) image_xscale = 1.5;
-instance_destroy();
+if surface_exists(surf) surface_free(surf);
+with objSave instance_destroy();
+bossStart = 1;
 </string>
           </argument>
         </arguments>
@@ -115,7 +94,8 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !surface_exists(surf)
+            <string>if bossStart || global.bossItem[5] exit;
+if !surface_exists(surf)
 {
     surf = surface_create(abs(sprite_width), abs(sprite_height));
 }
@@ -165,6 +145,7 @@ if !triggered &amp;&amp; !skipPressed &amp;&amp; scrPlayerDistance() &lt;= 40 &a
 
 if triggered
 {
+    global.noPause = 1;
     if keyboard_check_pressed(ord('S')) &amp;&amp; global.bossMKidCutscene
     {
         alarm[0] = 1;
@@ -224,6 +205,7 @@ if triggered
           <argument>
             <kind>1</kind>
             <string>if surface_exists(surf) surface_free(surf);
+global.noPause = 0;
 </string>
           </argument>
         </arguments>
@@ -269,7 +251,8 @@ if triggered
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprMKidSkipHint, 0, 800-sprite_get_width(sprMKidSkipHint)/2, sprite_get_height(sprMKidSkipHint)/2, 1, 1, 0, c_white, skipAlp);
+            <string>if bossStart || global.bossItem[5] exit;
+draw_sprite_ext(sprMKidSkipHint, 0, 800-sprite_get_width(sprMKidSkipHint)/2, sprite_get_height(sprMKidSkipHint)/2, 1, 1, 0, c_white, skipAlp);
 </string>
           </argument>
         </arguments>
@@ -293,6 +276,7 @@ if triggered
           <argument>
             <kind>1</kind>
             <string>draw_self();
+if bossStart || global.bossItem[5] exit;
 if scrPlayerDistance() &lt;= 65
 {
     draw_surface(surf, bbox_left, bbox_top);

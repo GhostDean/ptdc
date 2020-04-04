@@ -26,7 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>if(global.bossItem[2]){
-instance_destroy();
+sprite_index = sprS5BossDead;
+image_index = 8;
+image_speed = 0;
+mask_index = sprMaskNothing;
+//instance_destroy();
 }else{
 boss_activate=false;
 image_speed = 0.2;
@@ -418,7 +422,9 @@ alarm[2] = 100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(x + 64 &gt; view_xview[0] + 704){
+            <string>if global.bossItem[2] exit;
+
+if(x + 64 &gt; view_xview[0] + 704){
     x = view_xview[0] + 704 - 64;
     hspeed = 0;
     if(state == 2)alarm[3] = 1;
@@ -479,7 +485,8 @@ if(y + 64 &gt; view_yview[0] + 544){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!boss_activate&amp;&amp;instance_exists(objPlayer)){
+            <string>if global.bossItem[2] exit;
+if(!boss_activate&amp;&amp;instance_exists(objPlayer)){
     if(objPlayer.x&lt;704&amp;&amp;objPlayer.x&gt;96){
         var a=instance_create(32,320,objBossBlock);
         a.image_yscale=3;
@@ -492,6 +499,7 @@ if(y + 64 &gt; view_yview[0] + 544){
         alarm[0]=30;alarm[2]=70;
         boss_activate=true;
         scrInitHpBar(id, 2, 'Abomination');
+        global.noPause = 1;
     }
 }
 
@@ -577,7 +585,8 @@ switch(state){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!hp)exit;
+            <string>if global.bossItem[2] exit;
+if(!hp)exit;
 with(other)instance_destroy();
 if(nohurt)exit;
 nohurt = true;
@@ -594,6 +603,7 @@ if(hurt_alpha &gt; 0.8)hurt_alpha = 0.8; //damage red light effect
 
 hurt_count = hurt_cold;   //hurt cold
 if(hp &lt;= 0){
+    global.noPause = 0;
     state = -2; hp=0;
     sprite_index = sprS5BossDead;
     y = view_xview[0] + 480;
@@ -627,7 +637,8 @@ if(hp &lt;= 0){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(state == 0 or state == 2 or state == 3)scrKillPlayer();
+            <string>if global.bossItem[2] exit;
+if(state == 0 or state == 2 or state == 3)scrKillPlayer();
 </string>
           </argument>
         </arguments>
@@ -681,6 +692,8 @@ with(objBossBlock)instance_destroy();
 {
     audio_stop_sound(musS3Boss);
 }
+
+global.noPause = 0;
 </string>
           </argument>
         </arguments>
@@ -704,6 +717,8 @@ with(objBossBlock)instance_destroy();
           <argument>
             <kind>1</kind>
             <string>draw_self();
+
+if global.bossItem[2] exit;
 
 if(hurt_alpha &gt; 0.05)draw_self_blend(make_color_rgb(200,0,0),hurt_alpha);
 

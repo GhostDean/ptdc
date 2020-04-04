@@ -312,6 +312,7 @@ else
     {
         instance_destroy();
     }
+    global.noPause = 0;
     global.bossItem[0] = 1;
     scrSaveGame(0);
 }
@@ -412,6 +413,7 @@ scrKillPlayer();
 {
     audio_stop_sound(musAppleTreeMutant);
 }
+global.noPause = 0;
 </string>
           </argument>
         </arguments>
