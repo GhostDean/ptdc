@@ -1142,7 +1142,11 @@
       <background>background\bgs8_2</background>
       <background>background\tileS7deco</background>
       <background>background\tileS7block</background>
+      <background>background\tileS7block2</background>
+      <background>background\tileS7block3</background>
       <background>background\tileS7border</background>
+      <background>background\tileS7border2</background>
+      <background>background\tileS7border3</background>
     </backgrounds>
     <backgrounds name="S8Boss">
       <background>background\bgFB</background>

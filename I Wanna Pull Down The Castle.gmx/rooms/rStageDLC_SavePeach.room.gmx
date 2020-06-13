@@ -294,8 +294,6 @@
     <tile bgName="tileS7border" x="464" y="512" w="16" h="16" xo="32" yo="0" id="10159677" name="inst_3D4E1A84" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="512" y="512" w="16" h="16" xo="32" yo="0" id="10159678" name="inst_C4EC900A" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="592" y="512" w="16" h="16" xo="32" yo="0" id="10159679" name="inst_5A57361A" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileS7border" x="720" y="512" w="16" h="16" xo="32" yo="0" id="10159680" name="inst_152426AE" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileS7border" x="768" y="512" w="16" h="16" xo="32" yo="0" id="10159681" name="inst_ADAFC601" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="672" y="512" w="16" h="16" xo="32" yo="0" id="10159682" name="inst_01112B7F" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="640" y="512" w="16" h="16" xo="32" yo="0" id="10159683" name="inst_EC6D65DC" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="608" y="512" w="16" h="16" xo="32" yo="0" id="10159684" name="inst_D0EC3845" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -317,10 +315,6 @@
     <tile bgName="tileS7border" x="656" y="512" w="16" h="16" xo="16" yo="0" id="10159702" name="inst_A6621BBA" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="624" y="512" w="16" h="16" xo="16" yo="0" id="10159703" name="inst_73EC27C8" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="688" y="512" w="16" h="16" xo="16" yo="0" id="10159704" name="inst_F9A1FC9D" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileS7border" x="736" y="512" w="16" h="16" xo="16" yo="0" id="10159705" name="inst_64BC6D82" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileS7border" x="784" y="512" w="16" h="16" xo="16" yo="0" id="10159706" name="inst_9DDC15B8" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileS7border" x="752" y="512" w="16" h="16" xo="48" yo="0" id="10159707" name="inst_74922213" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileS7border" x="704" y="512" w="16" h="16" xo="48" yo="0" id="10159708" name="inst_AC75CE79" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="576" y="512" w="16" h="16" xo="48" yo="0" id="10159709" name="inst_4763908A" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="544" y="512" w="16" h="16" xo="48" yo="0" id="10159710" name="inst_E821BC7B" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="480" y="512" w="16" h="16" xo="48" yo="0" id="10159711" name="inst_9891C1E7" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -413,12 +407,6 @@
     <tile bgName="tileS7border" x="704" y="272" w="16" h="16" xo="0" yo="16" id="10166992" name="inst_2CCD1FC6" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="704" y="304" w="16" h="16" xo="0" yo="16" id="10166993" name="inst_24018F27" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="704" y="336" w="16" h="16" xo="0" yo="16" id="10166994" name="inst_C7834C8B" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileS7border" x="704" y="496" w="16" h="16" xo="0" yo="64" id="10166995" name="inst_92B77810" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileS7border" x="720" y="496" w="16" h="16" xo="16" yo="64" id="10166996" name="inst_58CF6574" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileS7border" x="768" y="496" w="16" h="16" xo="16" yo="64" id="10166997" name="inst_58C6FFC7" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileS7border" x="736" y="496" w="16" h="16" xo="32" yo="64" id="10166998" name="inst_A1BF5C5A" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileS7border" x="784" y="496" w="16" h="16" xo="32" yo="64" id="10166999" name="inst_7256C5BA" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileS7border" x="752" y="496" w="16" h="16" xo="48" yo="64" id="10167000" name="inst_5A70CC93" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="80" y="384" w="16" h="16" xo="64" yo="32" id="10174852" name="inst_BA8CFD84" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="80" y="368" w="16" h="16" xo="64" yo="16" id="10174853" name="inst_FBE737E4" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="704" y="384" w="16" h="16" xo="0" yo="48" id="10174854" name="inst_96E8E8D7" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -429,6 +417,8 @@
     <tile bgName="tileS7border" x="704" y="464" w="16" h="16" xo="0" yo="32" id="10175046" name="inst_88ED94B6" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="704" y="432" w="16" h="16" xo="0" yo="48" id="10175047" name="inst_14697719" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileS7border" x="704" y="480" w="16" h="16" xo="0" yo="48" id="10175048" name="inst_C2A50E11" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileS7border" x="704" y="496" w="16" h="16" xo="0" yo="32" id="10179331" name="inst_3711E25B" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileS7border" x="704" y="512" w="16" h="16" xo="48" yo="48" id="10179332" name="inst_6B51653D" depth="100000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
