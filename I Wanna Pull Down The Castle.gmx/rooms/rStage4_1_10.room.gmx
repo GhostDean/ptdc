@@ -54,7 +54,7 @@
     <instance objName="objWorld" x="-64" y="1440" name="inst_E3F67D4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWarp" x="-32" y="1088" name="inst_CF98CB02" locked="0" code="image_yscale = 2;&#xA;roomTo = rStage4_1_11&#xA;warpX = 790&#xA;warpY = -1&#xA;roomwarp = -1;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="QmapFollowCan" x="-64" y="1280" name="inst_0787BC31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="QmapRoomSetting" x="800" y="0" name="inst_03F945AE" locked="0" code="myX=32&#xA;myY=0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="QmapRoomSetting" x="832" y="0" name="inst_03F945AE" locked="0" code="myX=32&#xA;myY=0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSave" x="1440" y="96" name="inst_C4B8846E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeLeft" x="1312" y="0" name="inst_672F1350" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeRight" x="1280" y="0" name="inst_E684992F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -145,7 +145,7 @@
     <instance objName="objBlock" x="544" y="928" name="inst_714B17B5" locked="0" code="" scaleX="2" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="objWarp" x="1600" y="64" name="inst_57289984" locked="0" code="image_yscale = 2;&#xA;roomTo = rStage4_1_boss&#xA;warpX = 8&#xA;warpY = 0" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="QmapRoomSetting" x="800" y="608" name="inst_3C5C3DAB" locked="0" code="myX=32&#xA;myY=1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="QmapRoomSetting" x="0" y="0" name="inst_420A5768" locked="0" code="myX=31&#xA;myY=0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="QmapRoomSetting" x="0" y="0" name="inst_420A5768" locked="0" code="myX=31&#xA;myY=0&#xA;" scaleX="1.03999996185303" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="QmapRoomSetting" x="0" y="608" name="inst_50DE0D28" locked="0" code="myX=31&#xA;myY=1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWarp" x="640" y="1216" name="inst_FCEED361" locked="0" code="image_xscale = 2;&#xA;roomTo = rStage4_1_5;&#xA;warpX = 0;&#xA;warpY = -1;&#xA;roomwarp = -2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objMiniUp" x="704" y="1040" name="inst_EC21B9B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

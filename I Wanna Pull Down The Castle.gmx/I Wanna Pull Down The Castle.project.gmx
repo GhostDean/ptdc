@@ -1087,8 +1087,10 @@
         <background>background\QBGS6BG2</background>
         <background>background\QBGS6BG3</background>
         <background>background\QTileS6</background>
+        <background>background\QTileS6_backup</background>
         <background>background\block2</background>
         <background>background\QBGS6Block</background>
+        <background>background\QBGS6Block_backup</background>
       </backgrounds>
     </backgrounds>
     <backgrounds name="Deprecated">
