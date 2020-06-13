@@ -72,7 +72,7 @@
     <instance objName="QmapRoomSetting" x="0" y="0" name="inst_60F10119" locked="0" code="myX=18&#xA;myY=5" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="448" y="2976" name="inst_478B0485" locked="0" code="" scaleX="11" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="608" y="2880" name="inst_489353D3" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objWarp" x="800" y="2912" name="inst_D44DDDD8" locked="0" code="image_ysacle = 2;&#xA;roomTo = rStage2_2_10;&#xA;warpX = 12;&#xA;warpY = -1;&#xA;roomwarp = -4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWarp" x="800" y="2912" name="inst_D44DDDD8" locked="0" code="image_yscale = 2;&#xA;roomTo = rStage2_2_10;&#xA;warpX = 12;&#xA;warpY = -1;&#xA;roomwarp = -4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeLeft" x="96" y="4000" name="inst_6A22A840" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="160" y="3808" name="inst_3E657277" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="608" y="3808" name="inst_BAED7E48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -147,7 +147,7 @@
     <instance objName="objBlock" x="768" y="2432" name="inst_ECFCA8AB" locked="0" code="" scaleX="1" scaleY="11" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="0" y="2432" name="inst_913E3801" locked="0" code="" scaleX="1" scaleY="5" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="128" y="2592" name="inst_06BE1597" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objS2Lift" x="32" y="2432" name="inst_EE3A8CEE" locked="0" code="h=true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objS2Lift" x="672" y="2432" name="inst_EE3A8CEE" locked="0" code="h=true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objLiftStopBlock" x="768" y="2432" name="inst_879EC976" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objLiftStopBlock" x="0" y="2432" name="inst_2978FD03" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeUp" x="256" y="2752" name="inst_45F6CD00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -274,8 +274,9 @@
     <instance objName="objLiftStopBlock" x="32" y="2240" name="inst_2BA34959" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objLiftStopBlock" x="736" y="2240" name="inst_83E9CE70" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objSave" x="544" y="1952" name="inst_661C2CFE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSave" x="752" y="128" name="inst_C8C0CF13" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objPlayerStart" x="752" y="96" name="inst_90E34CC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSave" x="704" y="256" name="inst_C8C0CF13" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPlayerStart" x="704" y="256" name="inst_90E34CC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objQS7Door" x="752" y="64" name="inst_2717E007" locked="0" code="" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="qS0Tile" x="448" y="3488" w="32" h="32" xo="96" yo="352" id="10158113" name="inst_F90A638D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -58,7 +58,7 @@
     <instance objName="objSave" x="1984" y="128" name="inst_E20A370A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWarp" x="800" y="448" name="inst_9A350707" locked="0" code="image_yscale = 3;&#xA;roomTo = rStage8_item;&#xA;warpX = 8;&#xA;warpY = 0;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="QmapRoomSetting" x="0" y="0" name="inst_0988CFC2" locked="0" code="myX=34&#xA;myY=27" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_portal" x="400" y="480" name="inst_B0FFF78D" locked="0" code="portalId = 9;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_portal" x="400" y="496" name="inst_B0FFF78D" locked="0" code="portalId = 9;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="0" y="544" name="inst_08C48960" locked="0" code="" scaleX="25" scaleY="2.06451606750488" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="0" y="0" name="inst_29D2F937" locked="0" code="" scaleX="1" scaleY="17" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="768" y="0" name="inst_2CF656FE" locked="0" code="" scaleX="1" scaleY="14" colour="4294967295" rotation="0"/>
