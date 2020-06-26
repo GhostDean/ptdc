@@ -95,6 +95,7 @@ for (var i = 0; i < global.snapshotNum; i++)
 }
 // map system surface
 global.surfMap = -1;
+global.exploredMapChunks = 0;
 // Cutscene
 global.s7UnlockDoor = false;
 global.s4WaterCutscene = false;

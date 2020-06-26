@@ -95,6 +95,7 @@ for(var j=0; j<40; j++)
     }
 }
 
+saveMap[? 'exploredChunks'] = global.exploredMapChunks;
 saveMap[? 'bossMKidCutscene'] = global.bossMKidCutscene;
 saveMap[? 's7UnlockDoor'] = global.s7UnlockDoor;
 saveMap[? 's4WaterCutscene'] = global.s4WaterCutscene;

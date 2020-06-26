@@ -65,10 +65,11 @@ if (loadFile)
         {
             for(var k=0; k<30; k++)
             {
-                global.map[j,k] = ds_map_find_value(saveMap,"saveMapRoom["+string(j)+"]["+string(k)+"]");
-                //ds_map_add(saveMap,"saveMapRoom["+string(j)+"]["+string(k)+"]",global.map[j,k]);
+                global.map[j, k] = saveMap[? "saveMapRoom[" + string(j) + "][" + string(k) + "]"];
             }
         }
+        
+        global.exploredMapChunks = saveMap[? 'exploredChunks'];
         
         global.bossMKidCutscene = saveMap[? 'bossMKidCutscene'];
         global.s7UnlockDoor = saveMap[? 's7UnlockDoor'];

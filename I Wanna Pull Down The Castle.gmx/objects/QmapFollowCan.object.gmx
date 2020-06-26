@@ -183,8 +183,10 @@ view_yview[0] = round(y - (view_hview[0]/2));
           <argument>
             <kind>1</kind>
             <string>/// Check whether discover new map chunk
+if (curRoomX == 0 &amp;&amp; curRoomY == 0) exit;
 if(!global.map[curRoomX, curRoomY])
 {
+    global.exploredMapChunks++;
     global.map[curRoomX, curRoomY] = true;
     event_user(0);// redraw the map surface
 }
@@ -351,6 +353,10 @@ if displayMap
     draw_surface(global.surfMap, 80, 64);
     // draw kid head
     draw_sprite(sprQ_mapHead, 0, 82+16*curRoomX, 67+16*curRoomY);
+    // draw exploration progress
+    draw_set_font(fntPixel21);
+    draw_text(80+32, 64+32, 'Map Progress: ' + string_format(global.exploredMapChunks / global.totalMapChunks * 100, 3, 2) + '%');
+    draw_set_font(fDefault12);
 }
 else
 {

@@ -207,6 +207,7 @@ o.sd=-0.01
                 global.portalSnapshot[i] = -1;
             }
         }
+        global.exploredMapChunks = 0;
         global.gameStarted=true;
         global.autosave=true;
         global.difficulty=0;

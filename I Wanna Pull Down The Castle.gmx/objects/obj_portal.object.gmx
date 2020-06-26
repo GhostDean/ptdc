@@ -83,7 +83,6 @@ event_user(0);
 var _curSetIndex = 0;
 // Poratl 0
 scrAddPortalInfo(_curSetIndex++, 288, 384, rStage0_2, _("0"), 7, 12);
-show_debug_message(_curSetIndex)
 // Portal 1
 scrAddPortalInfo(_curSetIndex++, 336, 448, rStage0_1_transport2, _('1-1'), 14, 12);
 // Portal 2

@@ -36,6 +36,8 @@ global.controllerDelayLength = 5;   //sets the delay in frames in which the play
 global.extraSaveProtection = false; //sets whether to use the ds_map_secure functions for saving/loading (improves save security and prevents transferring between PCs)
 
 // Umbrella 2
+// the total number of map chunks
+global.totalMapChunks = 464;
 // portal snapshot
 global.snapshotNum = 11;
 // translation system
