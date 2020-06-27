@@ -40,6 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>hp = 7;
+hpmax = hp;
 slimeIdle = sprSlimeRedIdle;
 slimeWalk = sprSlimeRedWalk;
 slimeAttack = sprSlimeRedAttack;

@@ -40,6 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>hp = 11;
+hpmax = hp;
 skArcherIdle = sprSkArcherLavaIdle;
 skArcherWalk = sprSkArcherLavaWalk;
 skArcherAttack = sprSkArcherLavaAttack;

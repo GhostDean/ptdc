@@ -304,6 +304,7 @@
       <sprite>sprites\sprItemSlide</sprite>
       <sprite>sprites\sprItemBlock</sprite>
       <sprite>sprites\sprItemInfiniteOxygen</sprite>
+      <sprite>sprites\sprItemCrimsonOrb</sprite>
       <sprite>sprites\sprSecretItemI</sprite>
       <sprite>sprites\sprSecretItemW</sprite>
       <sprite>sprites\sprSecretItemB</sprite>
@@ -762,6 +763,7 @@
       <sprite>sprites\sprBossHpBar</sprite>
       <sprite>sprites\sprConveyorRight</sprite>
       <sprite>sprites\sprConveyorLeft</sprite>
+      <sprite>sprites\sprS0Tile1</sprite>
     </sprites>
     <sprite>sprites\QSprGear1</sprite>
     <sprite>sprites\sprite390_ice</sprite>
@@ -2280,7 +2282,6 @@
     </objects>
     <objects name="enemy elite">
       <object>objects\obj_batElite</object>
-      <object>objects\obj_pumpkinElite</object>
       <object>objects\obj_slimeElite</object>
       <object>objects\obj_skArcherElite</object>
       <object>objects\obj_skWarriorElite</object>
@@ -2420,6 +2421,9 @@
         <object>objects\obj_galleryTrigger</object>
         <object>objects\obj_galleryLight</object>
         <object>objects\obj_galleryParticle</object>
+      </objects>
+      <objects name="S0">
+        <object>objects\obj_hiddenBlockS0</object>
       </objects>
       <objects name="S4">
         <object>objects\obj_s4Cutscene</object>

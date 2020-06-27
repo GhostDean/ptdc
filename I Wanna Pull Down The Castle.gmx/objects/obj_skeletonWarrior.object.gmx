@@ -48,6 +48,7 @@ image_speed = .1;
 mask.gravity = .4;
 
 hp = 11;
+hpmax = hp;
 skWarriorIdle = -1;
 skWarriorWalk = -1;
 skWarriorAttack = -1;
@@ -328,9 +329,7 @@ scrSyncPosWithMask();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !active return -1;
-
-if blocking
+            <string>if blocking
 {
     with other instance_destroy();
 }

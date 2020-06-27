@@ -40,6 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>hp = 3;
+hpmax = hp;
 moveSpeed = 2;
 radius = 250;
 
@@ -52,6 +53,20 @@ image_speed = .8;
       </action>
     </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>604</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_inherited</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>

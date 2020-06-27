@@ -48,6 +48,7 @@ image_speed = .1;
 mask.gravity = .4;
 
 hp = 25;
+hpmax = hp;
 skWarriorIdle = sprSkWarriorNormalIdle;
 skWarriorWalk = sprSkWarriorNormalWalk;
 skWarriorAttack = sprSkWarriorNormalAttack;
@@ -267,11 +268,7 @@ else
                     if image_alpha &gt; 0 &amp;&amp; invisibleTimer &lt; 140
                     {
                         image_alpha -= .1;
-                        if image_alpha == 0
-                        {
-                            mask.x = 1;
-                            mask.y = 1;
-                        }
+                        if image_alpha == 0 mask_index = sprMaskNothing;
                     }
                     if invisibleTimer == 90
                     {
@@ -296,6 +293,7 @@ else
                         image_alpha = 1;
                         mask.x = invX;
                         mask.y = invY;
+                        mask_index = -1;
                         scrChangeImage(skWarriorAttack, .8);
                         image_index = 3;
                     }
@@ -389,8 +387,7 @@ if effectTimer &gt; 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !active return -1;
-if invisible return -1;
+            <string>if invisible return -1;
 event_inherited();
 </string>
           </argument>
@@ -414,7 +411,8 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = skWarriorDead;
+            <string>mask.hspeed = 0;
+sprite_index = skWarriorDead;
 </string>
           </argument>
         </arguments>

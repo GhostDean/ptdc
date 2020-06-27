@@ -40,6 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>hp = 8;
+hpmax = 8;
 radius = 150;
 moveSpeed = 3;
 
@@ -136,7 +137,7 @@ if dodgeTimer &gt; 0 &amp;&amp; !dodging dodgeTimer--;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if active &amp;&amp; !dodging event_inherited();
+            <string>if !dodging event_inherited();
 </string>
           </argument>
         </arguments>
@@ -159,7 +160,8 @@ if dodgeTimer &gt; 0 &amp;&amp; !dodging dodgeTimer--;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = sprBatDead;
+            <string>speed = 0;
+sprite_index = sprBatDead;
 </string>
           </argument>
         </arguments>

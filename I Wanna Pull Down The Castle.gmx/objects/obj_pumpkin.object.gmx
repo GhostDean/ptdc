@@ -41,6 +41,7 @@
             <kind>1</kind>
             <string>image_speed = .1;
 hp = 3;
+hpmax = hp;
 headless = false;
 throwed = false;
 radius = 96;

@@ -40,6 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>hp = 5;
+hpmax = hp;
 slimeIdle = -1;
 slimeWalk = -1;
 slimeAttack = -1;
@@ -219,6 +220,20 @@ else
     <event eventtype="4" ename="objBullet">
       <action>
         <libid>1</libid>
+        <id>604</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_inherited</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -233,7 +248,7 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !active || hp == 0 return -1;
+            <string>if hp == 0 return -1;
 with instance_create(other.x,other.y,obj_slimeEffect)
 {
     depth = other.depth - 1;
@@ -243,20 +258,6 @@ with instance_create(other.x,other.y,obj_slimeEffect)
 </string>
           </argument>
         </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>

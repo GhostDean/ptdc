@@ -37,7 +37,7 @@ global.extraSaveProtection = false; //sets whether to use the ds_map_secure func
 
 // Umbrella 2
 // the total number of map chunks
-global.totalMapChunks = 464;
+global.totalMapChunks = 465;
 // portal snapshot
 global.snapshotNum = 11;
 // translation system

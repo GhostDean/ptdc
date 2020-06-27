@@ -40,6 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>hp = 18;
+hpmax = hp;
 
 radius = 180;
 moveSpeed = 2;

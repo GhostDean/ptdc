@@ -44,6 +44,7 @@ mask.sprite_index = sprNightmareMask;
 mask.gravity = .3;
 
 hp = 15;
+hpmax = hp;
 
 radius = 0;
 rectOffsetY = 59;

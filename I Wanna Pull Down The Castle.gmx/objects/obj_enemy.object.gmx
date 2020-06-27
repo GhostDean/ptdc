@@ -27,9 +27,16 @@
             <kind>1</kind>
             <string>mask = -1;
 hp = 1;
+hpmax = 1;
 bullet = false;
 active = false;
 giveUpThreshold = 150;
+
+showHp = 0;
+hpBarAlpha = 0;
+hpBarOffsetX = 0;
+hpBarOffsetY = -10;
+hpBarHeight = 10;
 </string>
           </argument>
         </arguments>
@@ -108,6 +115,12 @@ giveUpThreshold = 150;
         active = 0;
     }
 }
+
+if showHp
+{
+    if hpBarAlpha &gt; 0 hpBarAlpha -= .1;
+    else showHp = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -131,9 +144,9 @@ giveUpThreshold = 150;
           <argument>
             <kind>1</kind>
             <string>if bullet return -1;
-if !active return -1;
 if hp &lt;= 0 return -1;
 with other instance_destroy();
+if !active active = 1;
 hp--;
 if hp == 0
 {
@@ -142,6 +155,11 @@ if hp == 0
 }
 else
 {
+    if global.secretItem[7]
+    {
+        showHp = 1;
+        hpBarAlpha = 1;
+    }
     audio_play_sound(sndBossHit, 0, 0);
 }
 // let sprite turn red
@@ -188,6 +206,14 @@ alarm[11] = 5;
             <string>if sprite_exists(sprite_index)
 {
     draw_self();
+}
+if showHp
+{
+    var _startX = x - abs(sprite_xoffset) + hpBarOffsetX, _startY = y - abs(sprite_yoffset) + hpBarOffsetY;
+    var _width = abs(sprite_width);
+    draw_set_alpha(hpBarAlpha);
+    draw_healthbar(_startX, _startY, _startX + _width, _startY + hpBarHeight, hp / hpmax * 100, 0, c_red, c_green, 0, 0, 0);
+    draw_set_alpha(1);
 }
 if global.debugMode
 {

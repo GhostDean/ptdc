@@ -40,6 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>hp = 3;
+hpmax = hp;
 radius = 100;
 image_speed = .2;
 </string>
@@ -100,7 +101,7 @@ if active &amp;&amp; instance_exists(objPlayer)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if active event_inherited();
+            <string>event_inherited();
 </string>
           </argument>
         </arguments>
@@ -123,7 +124,8 @@ if active &amp;&amp; instance_exists(objPlayer)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = sprBatDead;
+            <string>speed = 0;
+sprite_index = sprBatDead;
 </string>
           </argument>
         </arguments>
