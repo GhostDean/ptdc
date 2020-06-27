@@ -197,7 +197,11 @@ if (global.gameStarted)
     
     if (!global.gamePaused) //check if the game is currently paused
     {
-        if (scrButtonCheckPressed(global.restartButton) &amp;&amp; !instance_exists(obj_itemObtain) &amp;&amp; !instance_exists(obj_s4Cutscene) &amp;&amp;global.restart)
+        var allowed = !instance_exists(obj_itemObtain)
+                    &amp;&amp; !instance_exists(obj_s4Cutscene)
+                    &amp;&amp; !instance_exists(obj_s4bDefeatCutscene)
+                    &amp;&amp; global.restart;
+        if (scrButtonCheckPressed(global.restartButton) &amp;&amp; allowed)
         {
             //stop death sound/music
             audio_stop_sound(global.deathSound);
@@ -377,7 +381,7 @@ if (global.debugMode &amp;&amp; global.gameStarted &amp;&amp; !global.gamePaused
         var _command = get_integer('Input command id', -1);
         switch _command
         {
-            case 0: // reset all item state
+            case 1: // reset all item state
                 for (var i = 0; i &lt; global.secretItemTotal; i++)
                 {
                     global.secretItem[i] = 0;
@@ -386,14 +390,14 @@ if (global.debugMode &amp;&amp; global.gameStarted &amp;&amp; !global.gamePaused
                 global.s4WaterCutscene = false;
                 show_debug_message('All items have been reset.');
                 break;
-            case 1: // reset all boss state
+            case 2: // reset all boss state
                 for (var i = 0; i &lt; global.bossItemTotal; i++)
                 {
                     global.bossItem[i] = 0;
                 }
                 show_debug_message('All bosses have been reset.');
                 break;
-            case 2: // get all items
+            case 3: // get all items
                 for (var i = 0; i &lt; global.secretItemTotal; i++)
                 {
                     global.secretItem[i] = true;

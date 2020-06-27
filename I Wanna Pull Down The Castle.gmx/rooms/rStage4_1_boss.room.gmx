@@ -141,7 +141,6 @@
     <instance objName="objBlock" x="960" y="848" name="inst_398F7564" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objS4BlockTrg" x="704" y="64" name="inst_176A01BC" locked="0" code="" scaleX="6" scaleY="2.06451606750488" colour="4294967295" rotation="0"/>
     <instance objName="objS4BlockTrg" x="688" y="544" name="inst_F9536890" locked="0" code="bossTrigger = 1;&#xA;" scaleX="7" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="objPlayerStart" x="1088" y="96" name="inst_DD47AD4B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="qBGS4Block" x="928" y="128" w="64" h="32" xo="32" yo="96" id="10116473" name="inst_C3021365" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

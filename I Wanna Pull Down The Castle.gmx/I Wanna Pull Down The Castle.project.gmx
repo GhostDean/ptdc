@@ -25,6 +25,8 @@
       <sound>sound\sndStoneBreak</sound>
       <sound>sound\sndFBshoot</sound>
       <sound>sound\sndFBskill</sound>
+      <sound>sound\sndWarp</sound>
+      <sound>sound\sndChargePower</sound>
     </sounds>
     <sounds name="music">
       <sound>sound\musOnDeath</sound>
@@ -724,6 +726,7 @@
         <sprite>sprites\sprS4Boss_Bullet_6_0</sprite>
         <sprite>sprites\sprS4Boss_Bullet_6</sprite>
         <sprite>sprites\sprS4Boss_Bullet_7</sprite>
+        <sprite>sprites\sprS4Boss_SpellBall</sprite>
       </sprites>
       <sprites name="S5">
         <sprite>sprites\sprS5Boss</sprite>
@@ -2421,6 +2424,7 @@
       <objects name="S4">
         <object>objects\obj_s4Cutscene</object>
         <object>objects\obj_s4bDefeatCutscene</object>
+        <object>objects\obj_s4bSpellBall</object>
       </objects>
       <objects name="S5">
         <object>objects\obj_s5IceMirrorTutorial</object>

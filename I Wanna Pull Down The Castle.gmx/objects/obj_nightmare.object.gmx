@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>obj_enemy</parentName>
-  <maskName>sprNightmareMask</maskName>
+  <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -39,7 +39,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = 15;
+            <string>mask = instance_create(x, y, obj_movementMask);
+mask.sprite_index = sprNightmareMask;
+mask.gravity = .3;
+
+hp = 15;
 
 radius = 0;
 rectOffsetY = 59;
@@ -47,7 +51,6 @@ rectWidth = 300;
 rectHeight = 59;
 
 moveSpeed = .1;
-gravity = .3;
 
 image_speed = .15;
 </string>
@@ -73,6 +76,7 @@ image_speed = .15;
           <argument>
             <kind>1</kind>
             <string>if hp == 0 exit;
+scrSyncPosWithMask();
 
 if !active
 {
@@ -89,31 +93,8 @@ else
         if(moveSpeed&gt;-5)moveSpeed-=0.2;
         if(moveSpeed&gt;0)moveSpeed-=0.2;
     }
-    hspeed=moveSpeed;
+    mask.hspeed=moveSpeed;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objBlock">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>scrEnemyCollision();
 </string>
           </argument>
         </arguments>
