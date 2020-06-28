@@ -444,6 +444,7 @@ else if sprite_index == skWarriorAttack
 {
     if curAttackMode == 2
     {
+        mask_index = -1;
         image_alpha = 1;
         invisible = 0;
         invisibleTimer = 0;
