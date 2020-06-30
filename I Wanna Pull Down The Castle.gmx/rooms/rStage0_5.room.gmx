@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="objWorld" x="-64" y="224" name="inst_E3F67D4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objWarp" x="-32" y="320" name="inst_CF98CB02" locked="0" code="image_yscale = 6;&#xA;roomTo = rStage0_3&#xA;warpX = 790&#xA;warpY = 0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWarp" x="-32" y="320" name="inst_CF98CB02" locked="0" code="image_yscale = 3;&#xA;roomTo = rStage0_1&#xA;warpX = 3990&#xA;warpY = 0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="QmapFollowCan" x="-64" y="64" name="inst_0787BC31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="QmapRoomSetting" x="0" y="0" name="inst_3DBF5DFB" locked="0" code="myX=8&#xA;myY=12&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSave" x="32" y="416" name="inst_C73BA32D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

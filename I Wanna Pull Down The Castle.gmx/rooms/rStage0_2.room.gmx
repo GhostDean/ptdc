@@ -58,7 +58,6 @@
     <instance objName="QmapRoomSetting" x="0" y="0" name="inst_3DBF5DFB" locked="0" code="myX=6&#xA;myY=12&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSave" x="32" y="395" name="inst_C73BA32D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWarp" x="800" y="160" name="inst_0DE39A20" locked="0" code="roomTo = rStage0_3&#xA;warpX = 12&#xA;warpY = 0" scaleX="2" scaleY="9" colour="4294967295" rotation="0"/>
-    <instance objName="obj_portal" x="400" y="368" name="inst_D662B68B" locked="0" code="portalId = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="qBGS1BG" x="0" y="0" w="800" h="608" xo="0" yo="0" id="10002888" name="inst_AC9F4B7A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
