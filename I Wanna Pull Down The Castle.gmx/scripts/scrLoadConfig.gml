@@ -32,6 +32,21 @@ global.pauseButton[0] = ini_read_real("Controls","Pause",ord("P"));
 global.alignLeftButton[0] = ini_read_real("Controls","Align_left",ord("A"));
 global.alignRightButton[0] = ini_read_real("Controls","Align_right",ord("D"));
 
+global.leftButton[0] = ord("A");
+global.rightButton[0] = ord("D");
+global.upButton[0] = ord("W");
+global.downButton[0] = ord("S");
+global.jumpButton[0] = ord("J");
+global.shootButton[0] = ord("K");
+global.shootButton2[0] = ord("L");
+global.restartButton[0] = ord("R");
+global.skipButton[0] = ord("E");
+global.suicideButton[0] = ord("Q");
+global.pauseButton[0] = ord("P");
+global.alignLeftButton[0] = ord("Z");
+global.alignRightButton[0] = ord("C");
+global.bowButton = ord("F");
+
 //menu keys (not rebindable)
 global.menuLeftButton[0] = vk_left;
 global.menuRightButton[0] = vk_right;

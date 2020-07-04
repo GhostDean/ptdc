@@ -329,9 +329,21 @@ surface_reset_target();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_exists(obj_portal)
+            <string>warp=0
+warpX = curRoomX
+warpY = curRoomY;
+if instance_exists(obj_portal)
 {
-    if obj_portal.activate exit;
+    if obj_portal.activate 
+    {
+        displayMap = 1;
+        warp = 1;
+        with(obj_portal)
+        {
+            other.warpX = teleX[curSelectedIndex]
+            other.warpY = teleY[curSelectedIndex]
+        }
+    }
 }
 
 if !scrCheckPlayerExists() exit;
@@ -352,11 +364,14 @@ if displayMap
     // draw map surface
     draw_surface(global.surfMap, 80, 64);
     // draw kid head
-    draw_sprite(sprQ_mapHead, 0, 82+16*curRoomX, 67+16*curRoomY);
+    draw_sprite(sprQ_mapHead, 0, 82+16*warpX, 67+16*warpY);
     // draw exploration progress
-    draw_set_font(fntPixel21);
-    draw_text(80+32, 64+32, 'Map Progress: ' + string_format(global.exploredMapChunks / global.totalMapChunks * 100, 3, 2) + '%');
-    draw_set_font(fDefault12);
+    if(global.totalMapChunks &amp;&amp; global.exploredMapChunks)
+    {
+        draw_set_font(fntPixel21);
+        draw_text(80+32, 64+32, 'Map Progress: ' + string_format(global.exploredMapChunks / global.totalMapChunks * 100, 3, 2) + '%');
+        draw_set_font(fDefault12);
+    }
 }
 else
 {

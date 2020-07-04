@@ -460,7 +460,7 @@ if (slideBlockTouching != noone)    //on a slide block, start moving with it
 if (abs(vspeed) &gt; maxVspeed) {vspeed = sign(vspeed)*maxVspeed;} //check if moving vertically faster than max speed
 
 
-if (keyboard_check_pressed(ord('A')))
+if (keyboard_check_pressed(global.bowButton))
 {
     if(global.secretItem[1])
     {
