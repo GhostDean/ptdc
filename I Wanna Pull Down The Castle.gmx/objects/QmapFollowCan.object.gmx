@@ -330,24 +330,27 @@ surface_reset_target();
           <argument>
             <kind>1</kind>
             <string>warp=0
-warpX = curRoomX
-warpY = curRoomY;
+headX = curRoomX
+headY = curRoomY;
 if instance_exists(obj_portal)
 {
+    //set map display on when selecting where to teleport
     if obj_portal.activate 
     {
         displayMap = 1;
         warp = 1;
+        //set kid head x,y
         with(obj_portal)
         {
-            other.warpX = teleX[curSelectedIndex]
-            other.warpY = teleY[curSelectedIndex]
+            other.headX = teleX[curSelectedIndex]
+            other.headY = teleY[curSelectedIndex]
         }
     }
 }
 
 if !scrCheckPlayerExists() exit;
 
+depth=-1000
 if displayMap
 {
     if !surface_exists(global.surfMap)
@@ -364,7 +367,7 @@ if displayMap
     // draw map surface
     draw_surface(global.surfMap, 80, 64);
     // draw kid head
-    draw_sprite(sprQ_mapHead, 0, 82+16*warpX, 67+16*warpY);
+    draw_sprite(sprQ_mapHead, 0, 82+16*headX, 67+16*headY);
     // draw exploration progress
     if(global.totalMapChunks &amp;&amp; global.exploredMapChunks)
     {
@@ -400,6 +403,7 @@ else
     draw_sprite(sprQ_mapHead, 0, 740+16*(curRoomX-xx-2), 31+16*(curRoomY-yy-1));
     shader_reset();
 }
+depth=-1
 </string>
           </argument>
         </arguments>

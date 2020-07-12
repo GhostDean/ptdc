@@ -1238,6 +1238,44 @@
       </backgrounds>
     </backgrounds>
     <background>background\bgDemoThanks</background>
+    <backgrounds name="Intro">
+      <background>background\bgIntroLayer1</background>
+      <background>background\bgIntroLayer2</background>
+      <background>background\bgIntroLayer3</background>
+      <background>background\bgIntroLayer4</background>
+      <background>background\bgIntroLayer5</background>
+      <background>background\bgIntroLayer6</background>
+      <background>background\bgIntroLayer7</background>
+      <background>background\bgIntroLayer8</background>
+      <background>background\bgIntroLayer9</background>
+      <background>background\bgIntroLayer10</background>
+      <background>background\tileIntroGroundCorner1</background>
+      <background>background\tileIntroGroundCorner2</background>
+      <background>background\tileIntroGround1</background>
+      <background>background\tileIntroGround2</background>
+      <background>background\tileIntroGround3</background>
+      <background>background\tileIntroGround4</background>
+      <background>background\tileIntroGround5</background>
+      <background>background\tileIntroHills1</background>
+      <background>background\tileIntroHills2</background>
+      <background>background\tileIntroLeaves1</background>
+      <background>background\tileIntroLeaves2</background>
+      <background>background\tileIntroGround_edge1</background>
+      <background>background\tileIntroGround_edge2</background>
+      <background>background\tileIntroGround_edge3</background>
+      <background>background\tileIntroGround_edge4</background>
+      <background>background\tileIntroNails_Layer01_1</background>
+      <background>background\tileIntroNails_Layer01_2</background>
+      <background>background\tileIntroNails_Layer01_3</background>
+      <background>background\tileIntroNails1</background>
+      <background>background\tileIntroNails2</background>
+      <background>background\tileIntroNails3</background>
+      <background>background\tileIntroNails4</background>
+      <background>background\tileIntroStairs1</background>
+      <background>background\tileIntroStairs1_1</background>
+      <background>background\tileIntroStairs2</background>
+      <background>background\tileIntroStairs2_1</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths">
     <paths name="QPath">
@@ -1570,6 +1608,9 @@
         <script>scripts\playerMiscIr.gml</script>
       </scripts>
     </scripts>
+    <scripts name="patrol">
+      <script>scripts\scrCreatePatrolPath.gml</script>
+    </scripts>
     <script>scripts\isFEZroom.gml</script>
     <script>scripts\IsIrRoom.gml</script>
   </scripts>
@@ -1736,6 +1777,7 @@
       <objects name="QStage0">
         <object>objects\QObjS1BG</object>
         <object>objects\obj_s0Fader</object>
+        <object>objects\objIntroBgContrloller</object>
       </objects>
       <objects name="QStage1">
         <objects name="QS1Block">
@@ -2263,6 +2305,9 @@
       <objects name="human">
         <object>objects\obj_rifler</object>
         <object>objects\obj_shielder</object>
+      </objects>
+      <objects name="patrol">
+        <object>objects\obj_patrolArea</object>
       </objects>
       <object>objects\obj_collideWall</object>
       <object>objects\obj_bat</object>

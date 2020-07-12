@@ -47,6 +47,10 @@ throwed = false;
 radius = 96;
 moveSpeed = 1;
 gravity = .3;
+isPatrol = true;
+xPatrol = xstart;
+p_left=64;
+p_right=64;
 </string>
           </argument>
         </arguments>
@@ -89,7 +93,7 @@ if !headless
     if !active
     {
         scrChangeImage(sprPumpkinIdle, .1);
-        if hspeed != 0 hspeed = 0;
+        //if hspeed != 0 hspeed = 0;       
         if scrPlayerDistance() &lt;= radius
         {
             active = true;

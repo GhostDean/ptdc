@@ -40,7 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = .2;
-
+ppp=0;
 hp = 5;
 hpmax = hp;
 radius = 150;
@@ -51,6 +51,11 @@ enum ATTACK_STATE
     BITE
 }
 
+isPatrol = true;
+patrolMode = 1;
+
+
+giveUpThreshold = 400;
 damaged = false;
 charging = false;
 chargeTime = 50;
@@ -207,6 +212,30 @@ if attacking
             <string>scrChangeImage(sprFlyDemonDead, .4);
 speed = 0;
 mask_index = sprMaskNothing;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="20">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(attackState != ATTACK_STATE.CHARGING_SHOOT)
+    event_inherited();
 </string>
           </argument>
         </arguments>

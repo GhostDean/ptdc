@@ -82,7 +82,7 @@ event_user(0);
             <string>/// Portal Setting
 var _curSetIndex = 0;
 // Poratl 0
-scrAddPortalInfo(_curSetIndex++, 288, 384, rStage0_2, _("0"), 6, 12);
+scrAddPortalInfo(_curSetIndex++, 2688, 480, rStage0_1, _("0"), 6, 12);
 // Portal 1
 scrAddPortalInfo(_curSetIndex++, 336, 448, rStage0_1_transport2, _('1-1'), 14, 12);
 // Portal 2
@@ -170,7 +170,8 @@ initSelectAngle = 90 + portalId * 360 / global.snapshotNum;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !sprite_exists(global.portalSnapshot[portalId]) &amp;&amp; place_meeting(x, y, objPlayer)
+            <string>//no longer required
+/*if !sprite_exists(global.portalSnapshot[portalId]) &amp;&amp; place_meeting(x, y, objPlayer)
 {
     var _path = working_directory + '\teleportSnaps\portalSnapshot' + string(portalId) + '.png';
     var _width = 200;
@@ -179,7 +180,7 @@ initSelectAngle = 90 + portalId * 360 / global.snapshotNum;
     screen_save_part(_path, x-_width/2, y-_height/2, _width, _height);
     QmapFollowCan.visible = 1;
     global.portalSnapshot[portalId] = sprite_add(_path, 1, 0, 0, 100, 75);
-}
+}*/
 </string>
           </argument>
         </arguments>
@@ -223,6 +224,8 @@ if !activate
         {
             with objPlayer frozen = 1;
             activate = 1;
+            
+            //Comment out old teleport effect
             /*for (var i = 0; i &lt; global.snapshotNum; i++)
             {
                 snapshot[i] = instance_create(0, 0, obj_portalSnapshot);
@@ -249,6 +252,7 @@ if !activate
 }
 else
 {
+    //Comment out old teleport effect
     /*if blackBGAlpha &lt; 1 blackBGAlpha += .05;
     else
     {
@@ -280,6 +284,7 @@ else
                 //if targetRotateAngle != curSelectAngle exit;
                 //targetRotateAngle -= snapshotAngleDelta;
                   
+                //find previous valid portal, use count&gt;0 to prevent game crash with corrupt data
                 while(count&gt;0)
                 {
                     curSelectedIndex--;
@@ -296,7 +301,7 @@ else
                 //if targetRotateAngle != curSelectAngle exit;
                 //targetRotateAngle += snapshotAngleDelta;
                 
-                
+                //find next valid portal, use count&gt;0 to prevent game crash with corrupt data
                 while(count&gt;0)
                 {
                     curSelectedIndex++;
@@ -314,6 +319,7 @@ else
             {
                 //if targetRotateAngle != curSelectAngle exit;
                 //if global.map[teleX[curSelectedIndex], teleY[curSelectedIndex]] &amp;&amp; teleportRoom[curSelectedIndex] != room
+                          
                 if teleportRoom[curSelectedIndex] != room
                 {
                     with objPlayer frozen = 1;
@@ -444,8 +450,12 @@ draw_text(800, 40, 'C key to quit the portal');
 draw_set_alpha(1);
 draw_set_halign(fa_left);
 draw_set_font(fDefault12);
-if(activate &amp;&amp; sprite_exists(global.portalSnapshot[curSelectedIndex]))
-    draw_sprite(global.portalSnapshot[curSelectedIndex],0,ellipseX, ellipseY-100);
+//draw teleport target snap
+//abandoned
+/*
+if(activate)
+    draw_sprite_ext(global.portalSnapshot[curSelectedIndex],0,view_xview[0]+200, view_yview[0] + 100, 0.5,0.5,0,c_white,0.7);
+*/
 </string>
           </argument>
         </arguments>

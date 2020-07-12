@@ -57,7 +57,7 @@
     <instance objName="QmapFollowCan" x="64" y="0" name="inst_0787BC31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="QmapRoomSetting" x="0" y="0" name="inst_3DBF5DFB" locked="0" code="myX=7&#xA;myY=12&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSave" x="32" y="395" name="inst_C73BA32D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objWarp" x="800" y="320" name="inst_0DE39A20" locked="0" code="roomTo = rStage0_5&#xA;warpX = 8&#xA;warpY = 0&#xA;" scaleX="1" scaleY="3.09677410125732" colour="4294967295" rotation="0"/>
+    <instance objName="objWarp" x="800" y="320" name="inst_0DE39A20" locked="0" code="roomTo = rStage0_5&#xA;warpX = 8&#xA;warpY = 0" scaleX="1" scaleY="3.09677410125732" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="736" y="0" name="inst_59B2DE31" locked="0" code="" scaleX="2" scaleY="10" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="768" y="416" name="inst_5B8B4151" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSlopeDownRight" x="736" y="416" name="inst_DEB820E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

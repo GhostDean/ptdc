@@ -44,6 +44,8 @@ hpmax = hp;
 moveSpeed = 2;
 radius = 250;
 
+isPatrol = true;
+patrolMode = 1;
 appearRadius = 100;
 image_alpha = .1;
 image_speed = .8;

@@ -54,7 +54,7 @@
     <instance objName="objWorld" x="-64" y="224" name="inst_E3F67D4A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWarp" x="-32" y="320" name="inst_CF98CB02" locked="0" code="image_yscale = 4;&#xA;roomTo = rStage0_5&#xA;warpX = 790&#xA;warpY = 0" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="QmapFollowCan" x="-64" y="64" name="inst_0787BC31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="QmapRoomSetting" x="0" y="0" name="inst_3DBF5DFB" locked="0" code="myX=9&#xA;myY=12&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="QmapRoomSetting" x="0" y="0" name="inst_3DBF5DFB" locked="0" code="myX=9&#xA;myY=12" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSave" x="32" y="416" name="inst_C73BA32D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWarp" x="1600" y="288" name="inst_42DF4E34" locked="0" code="image_yscale = 5;&#xA;roomTo = rStage0_4&#xA;warpX = 8&#xA;warpY = 0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="0" y="448" name="inst_329A1CD0" locked="0" code="" scaleX="25" scaleY="1" colour="4294967295" rotation="0"/>
@@ -84,11 +84,15 @@
     <instance objName="objBlock" x="96" y="160" name="inst_2FCFF115" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="576" y="160" name="inst_ECFC3083" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWarp" x="800" y="320" name="inst_79C58A51" locked="0" code="image_yscale = 4;&#xA;roomTo = rStage0_7&#xA;warpX = 8&#xA;warpY = -1&#xA;roomwarp = 1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pumpkin" x="272" y="320" name="inst_77B21E21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pumpkin" x="528" y="320" name="inst_0FA5A96F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pumpkin" x="272" y="320" name="inst_77B21E21" locked="0" code="isPatrol = true;&#xA;hspeed = moveSpeed;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pumpkin" x="528" y="320" name="inst_0FA5A96F" locked="0" code="isPatrol = true;&#xA;p_left = 72;&#xA;p_right = 14;&#xA;hspeed = -moveSpeed;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="352" y="160" name="inst_DDD8BEF2" locked="0" code="" scaleX="3" scaleY="9" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeRight" x="160" y="288" name="inst_44643D33" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeLeft" x="608" y="288" name="inst_E78C375D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_patrolArea" x="256" y="288" name="inst_B0395FF4" locked="0" code="patrolLeft=260;&#xA;patrolRight=344;&#xA;" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_patrolArea" x="448" y="288" name="inst_E68675CF" locked="0" code="patrolLeft=456;&#xA;patrolRight=540;&#xA;" scaleX="3.09677410125732" scaleY="1.03225803375244" colour="4294967295" rotation="0"/>
+    <instance objName="obj_patrolArea" x="0" y="416" name="inst_77961812" locked="0" code="patrolLeft=80;&#xA;patrolRight=320;&#xA;" scaleX="10.8387098312378" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_patrolArea" x="448" y="416" name="inst_E0CDCC40" locked="0" code="patrolLeft=464;&#xA;patrolRight=720;&#xA;" scaleX="10.8387098312378" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="qS0Tile" x="32" y="320" w="32" h="32" xo="64" yo="704" id="10141223" name="inst_3FFDB1F7" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
