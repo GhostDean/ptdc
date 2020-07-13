@@ -43,6 +43,7 @@ patrolMode = 0;
 patrolLeft = noone;
 patrolRight = noone;
 patrolPath = noone;
+isPathSmooth = 1;
 pathStarted = 0;
 
 GIVEUP_COUNTDOWN = 150;
@@ -118,7 +119,7 @@ giveUpCountdown = GIVEUP_COUNTDOWN;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!active &amp;&amp; patrolMode == 1) {
+            <string>if((!active &amp;&amp; patrolMode == 1) || instance_exists(player)) {
     if(x != xprevious) {
         image_xscale = sign(x-xprevious);
     }
@@ -223,8 +224,8 @@ switch (patrolMode)
     case 1: //path patrol
         if(!patrolPath &amp;&amp; other.patrolPath) {
             patrolPath = other.patrolPath;
-            pathStartX = path_get_point_x(patrolPath, 0);
-            pathStartY = path_get_point_y(patrolPath, 0);
+            pathStartX = path_get_point_x(patrolPath,0);
+            pathStartY = path_get_point_y(patrolPath,0);
         }
         break;
     default:

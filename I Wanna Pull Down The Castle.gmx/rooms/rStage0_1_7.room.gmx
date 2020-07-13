@@ -83,6 +83,8 @@
     <instance objName="objSpikeUp" x="608" y="480" name="inst_876C410D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSpikeDown" x="608" y="448" name="inst_D362E030" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1280" y="384" name="inst_AFE93F72" locked="0" code="" scaleX="6" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_patrolArea" x="832" y="160" name="inst_59DCAAF6" locked="0" code="pathX[0] = 800; pathY[0] = 288;&#xA;pathX[1] = 1056; pathY[1] = 192;&#xA;pathX[2] = 928; pathY[2] = 128;&#xA;pathX[3] = 800; pathY[3] = 288;&#xA;patrolPath = scrCreatePatrolPath(pathX,pathY,1, 100);" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_patrolArea" x="1344" y="288" name="inst_A14CE4C2" locked="0" code="pathX[0] = 1440; pathY[0] = 320;&#xA;pathX[1] = 1312; pathY[1] = 320;&#xA;pathX[2] = 1440; pathY[2] = 320;&#xA;patrolPath = scrCreatePatrolPath(pathX,pathY,1, 100);&#xA;" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="QTile_Block" x="1184" y="64" w="16" h="16" xo="0" yo="0" id="10147404" name="inst_686DD7C3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
