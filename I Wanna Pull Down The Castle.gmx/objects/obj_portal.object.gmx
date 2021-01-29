@@ -82,7 +82,7 @@ event_user(0);
             <string>/// Portal Setting
 var _curSetIndex = 0;
 // Poratl 0
-scrAddPortalInfo(_curSetIndex++, 2688, 480, rStage0_1, _("0"), 7, 12);
+scrAddPortalInfo(_curSetIndex++, 2688, 480, rStage0_1, _("0"), 6, 12);
 // Portal 1
 scrAddPortalInfo(_curSetIndex++, 336, 448, rStage0_1_transport2, _('1-1'), 14, 12);
 // Portal 2
@@ -170,6 +170,37 @@ initSelectAngle = 90 + portalId * 360 / global.snapshotNum;
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>//no longer required
+/*if !sprite_exists(global.portalSnapshot[portalId]) &amp;&amp; place_meeting(x, y, objPlayer)
+{
+    var _path = working_directory + '\teleportSnaps\portalSnapshot' + string(portalId) + '.png';
+    var _width = 200;
+    var _height = 150;
+    QmapFollowCan.visible = 0;
+    screen_save_part(_path, x-_width/2, y-_height/2, _width, _height);
+    QmapFollowCan.visible = 1;
+    global.portalSnapshot[portalId] = sprite_add(_path, 1, 0, 0, 100, 75);
+}*/
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>if instance_exists(obj_teleportFade) exit;
 if !activate
 {
@@ -193,7 +224,9 @@ if !activate
         {
             with objPlayer frozen = 1;
             activate = 1;
-            for (var i = 0; i &lt; global.snapshotNum; i++)
+            
+            //Comment out old teleport effect
+            /*for (var i = 0; i &lt; global.snapshotNum; i++)
             {
                 snapshot[i] = instance_create(0, 0, obj_portalSnapshot);
                 snapshot[i].angle = 360 / global.snapshotNum * i;
@@ -205,7 +238,7 @@ if !activate
                 {
                     snapshot[i].sprite_index = sprLockedTelePoint;
                 }
-            }
+            }*/
             event_user(0);
             //event_user(1);
         }
@@ -219,7 +252,8 @@ if !activate
 }
 else
 {
-    if blackBGAlpha &lt; 1 blackBGAlpha += .05;
+    //Comment out old teleport effect
+    /*if blackBGAlpha &lt; 1 blackBGAlpha += .05;
     else
     {
         if snapshotRadiusH &lt; snapshotRadiusHMax
@@ -242,31 +276,51 @@ else
                 {
                     curSelectAngle = max(curSelectAngle - animRotateSpeed, targetRotateAngle);
                 }
-            }
+            }*/
 
+            count=global.snapshotNum
             if keyboard_check_pressed(vk_left)
             {
-                if targetRotateAngle != curSelectAngle exit;
-                targetRotateAngle -= snapshotAngleDelta;
-                curSelectedIndex--;
-                if curSelectedIndex == -1 curSelectedIndex = global.snapshotNum - 1;
+                //if targetRotateAngle != curSelectAngle exit;
+                //targetRotateAngle -= snapshotAngleDelta;
+                  
+                //find previous valid portal, use count&gt;0 to prevent game crash with corrupt data
+                while(count&gt;0)
+                {
+                    curSelectedIndex--;
+                    if curSelectedIndex == -1 
+                        curSelectedIndex = global.snapshotNum - 1;
+                    if(global.map[teleX[curSelectedIndex],teleY[curSelectedIndex]])
+                        break;
+                    count--;
+                }
             }
             
             if keyboard_check_pressed(vk_right)
             {
-                if targetRotateAngle != curSelectAngle exit;
-                targetRotateAngle += snapshotAngleDelta;
-                curSelectedIndex++;
-                if curSelectedIndex == global.snapshotNum
+                //if targetRotateAngle != curSelectAngle exit;
+                //targetRotateAngle += snapshotAngleDelta;
+                
+                //find next valid portal, use count&gt;0 to prevent game crash with corrupt data
+                while(count&gt;0)
                 {
-                    curSelectedIndex = 0;
+                    curSelectedIndex++;
+                    if curSelectedIndex == global.snapshotNum
+                    {
+                        curSelectedIndex = 0;
+                    }
+                    if(global.map[teleX[curSelectedIndex],teleY[curSelectedIndex]])
+                        break;
+                    count--;
                 }
             }
             
             if keyboard_check_pressed(ord('Z'))
             {
-                if targetRotateAngle != curSelectAngle exit;
-                if global.map[teleX[curSelectedIndex], teleY[curSelectedIndex]] &amp;&amp; teleportRoom[curSelectedIndex] != room
+                //if targetRotateAngle != curSelectAngle exit;
+                //if global.map[teleX[curSelectedIndex], teleY[curSelectedIndex]] &amp;&amp; teleportRoom[curSelectedIndex] != room
+                          
+                if teleportRoom[curSelectedIndex] != room
                 {
                     with objPlayer frozen = 1;
                     with instance_create(0, 0, obj_teleportFade)
@@ -285,40 +339,10 @@ else
                 with objPlayer frozen = 0;
                 with obj_portalSnapshot instance_destroy();
             }
-        }
-    }
+        //}
+    //}
     // refresh snapshot instance state
     event_user(0);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if !sprite_exists(global.portalSnapshot[portalId]) &amp;&amp; place_meeting(x, y, objPlayer)
-{
-    var _path = 'portalSnapshot' + string(portalId) + '.png';
-    var _width = 200;
-    var _height = 150;
-    QmapFollowCan.visible = 0;
-    screen_save_part(_path, x-_width/2, y-_height/2, _width, _height);
-    QmapFollowCan.visible = 1;
-    global.portalSnapshot[portalId] = sprite_add(_path, 1, 0, 0, 100, 75);
 }
 </string>
           </argument>
@@ -426,6 +450,12 @@ draw_text(800, 40, 'C key to quit the portal');
 draw_set_alpha(1);
 draw_set_halign(fa_left);
 draw_set_font(fDefault12);
+//draw teleport target snap
+//abandoned
+/*
+if(activate)
+    draw_sprite_ext(global.portalSnapshot[curSelectedIndex],0,view_xview[0]+200, view_yview[0] + 100, 0.5,0.5,0,c_white,0.7);
+*/
 </string>
           </argument>
         </arguments>

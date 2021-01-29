@@ -1608,6 +1608,9 @@
         <script>scripts\playerMiscIr.gml</script>
       </scripts>
     </scripts>
+    <scripts name="patrol">
+      <script>scripts\scrCreatePatrolPath.gml</script>
+    </scripts>
     <script>scripts\isFEZroom.gml</script>
     <script>scripts\IsIrRoom.gml</script>
   </scripts>
@@ -2302,6 +2305,9 @@
       <objects name="human">
         <object>objects\obj_rifler</object>
         <object>objects\obj_shielder</object>
+      </objects>
+      <objects name="patrol">
+        <object>objects\obj_patrolArea</object>
       </objects>
       <object>objects\obj_collideWall</object>
       <object>objects\obj_bat</object>

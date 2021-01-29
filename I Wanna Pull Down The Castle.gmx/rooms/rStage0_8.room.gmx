@@ -3,8 +3,8 @@
   <caption></caption>
   <width>800</width>
   <height>608</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -83,7 +83,8 @@
     <instance objName="objSave" x="672" y="480" name="inst_532518E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWarp" x="800" y="384" name="inst_A2F69B1B" locked="0" code="image_yscale = 4;&#xA;roomTo = rStage0_9&#xA;warpX = 8&#xA;warpY = 0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWarp" x="320" y="-32" name="inst_C340C18D" locked="0" code="image_xscale = 5;&#xA;roomTo = rStage0_7&#xA;warpX = 0&#xA;warpY = 1814&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_flyingDemon" x="400" y="352" name="inst_1662401B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flyingDemon" x="400" y="368" name="inst_1662401B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_patrolArea" x="352" y="336" name="inst_4E41E68B" locked="0" code="pathX[0] = 400; pathY[0] = 368; &#xA;pathX[1] = 576; pathY[1] = 336; &#xA;pathX[2] = 400; pathY[2] = 272; &#xA;pathX[3] = 224; pathY[3] = 336; &#xA;pathX[4] = 400; pathY[4] = 368; &#xA;patrolPath = scrCreatePatrolPath(pathX,pathY,1,100);&#xA;" scaleX="3" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="qS0Tile" x="288" y="0" w="32" h="32" xo="736" yo="224" id="10142255" name="inst_02686BA1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

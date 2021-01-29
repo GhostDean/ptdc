@@ -63,6 +63,7 @@
     <instance objName="objBlock" x="64" y="224" name="inst_C6B2C58F" locked="0" code="" scaleX="21" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_flyingDemon" x="416" y="448" name="inst_C04CD160" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSave" x="64" y="448" name="inst_FD0B77AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_patrolArea" x="384" y="384" name="inst_BF6F912E" locked="0" code="pathX[0] = 416; pathY[0] = 448;&#xA;pathX[1] = 448; pathY[1] = 416;&#xA;pathX[2] = 416; pathY[2] = 384;&#xA;pathX[3] = 384; pathY[3] = 352;&#xA;pathX[4] = 416; pathY[4] = 320;&#xA;pathX[5] = 448; pathY[5] = 352;&#xA;pathX[6] = 416; pathY[6] = 384;&#xA;pathX[7] = 384; pathY[7] = 416;&#xA;pathX[8] = 416; pathY[8] = 448;&#xA;patrolPath = scrCreatePatrolPath(pathX,pathY,1, 100);&#xA;" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="qS0Tile" x="0" y="480" w="32" h="32" xo="32" yo="288" id="10153579" name="inst_E7768573" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -37,6 +37,17 @@ hpBarAlpha = 0;
 hpBarOffsetX = 0;
 hpBarOffsetY = -10;
 hpBarHeight = 10;
+
+isPatrol = false;
+patrolMode = 0;
+patrolLeft = noone;
+patrolRight = noone;
+patrolPath = noone;
+isPathSmooth = 1;
+pathStarted = 0;
+
+GIVEUP_COUNTDOWN = 150;
+giveUpCountdown = GIVEUP_COUNTDOWN;
 </string>
           </argument>
         </arguments>
@@ -91,6 +102,33 @@ hpBarHeight = 10;
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if((!active &amp;&amp; patrolMode == 1) || instance_exists(player)) {
+    if(x != xprevious) {
+        image_xscale = sign(x-xprevious);
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -110,17 +148,90 @@ hpBarHeight = 10;
             <kind>1</kind>
             <string>if instance_exists(objPlayer) &amp;&amp; active
 {
-    if abs(y - objPlayer.y) &gt;= giveUpThreshold
-    {
-        active = 0;
+    pathStarted = 0;
+    if(path_speed &gt; 0)
+        path_end();
+    event_user(10); //enemy give up logic
+}
+else
+{
+    if(isPatrol) {
+        if(patrolMode == 0 &amp;&amp; patrolLeft &amp;&amp; patrolRight) {
+            if(hspeed &gt; 0) {
+                if(x &gt;= patrolRight)
+                    hspeed *= -1;
+            }
+            else {
+                if(x &lt;= patrolLeft)
+                    hspeed *= -1;
+            }
+            if(hspeed != 0)
+                image_xscale *= sign(hspeed)*sign(image_xscale)
+            else
+                hspeed = -sign(image_xscale)*moveSpeed;
+        }
+        else if(patrolMode == 1 &amp;&amp; patrolPath) {
+            if(!pathStarted) {
+                if(point_distance(x,y,pathStartX, pathStartY) &gt;= moveSpeed) {
+                    move_towards_point(pathStartX, pathStartY, moveSpeed); 
+                }
+                else {
+                    x = pathStartX; 
+                    y = pathStartY;
+                    pathStarted = 1;
+                    path_start(patrolPath, moveSpeed, 1, 1);
+                }
+            }
+        }
     }
 }
 
 if showHp
 {
-    if hpBarAlpha &gt; 0 hpBarAlpha -= .1;
+    if hpBarAlpha &gt; 0 hpBarAlpha -= .01;
     else showHp = 0;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_patrolArea">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(active)
+    exit;
+switch (patrolMode)
+{
+    case 0: //line patrol
+        patrolLeft = other.patrolLeft;
+        patrolRight = other.patrolRight;
+        break;
+    case 1: //path patrol
+        if(!patrolPath &amp;&amp; other.patrolPath) {
+            patrolPath = other.patrolPath;
+            pathStartX = path_get_point_x(patrolPath,0);
+            pathStartY = path_get_point_y(patrolPath,0);
+        }
+        break;
+    default:
+        exit;
+}
+
 </string>
           </argument>
         </arguments>
@@ -170,6 +281,37 @@ alarm[11] = 5;
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="20">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (scrPlayerDistance() &gt;= giveUpThreshold) {
+    giveUpCountdown--;
+    if(giveUpCountdown &lt;= 0) {
+        active = 0;
+    }
+}
+else {
+    giveUpCountdown = GIVEUP_COUNTDOWN;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="0">
       <action>
         <libid>1</libid>
@@ -212,7 +354,7 @@ if showHp
     var _startX = x - abs(sprite_xoffset) + hpBarOffsetX, _startY = y - abs(sprite_yoffset) + hpBarOffsetY;
     var _width = abs(sprite_width);
     draw_set_alpha(hpBarAlpha);
-    draw_healthbar(_startX, _startY, _startX + _width, _startY + hpBarHeight, hp / hpmax * 100, 0, c_red, c_green, 0, 0, 0);
+    draw_healthbar(_startX, _startY, _startX + _width, _startY + hpBarHeight, hp / hpmax * 100, 0, c_red, c_green, 0, 0, 1);
     draw_set_alpha(1);
 }
 if global.debugMode

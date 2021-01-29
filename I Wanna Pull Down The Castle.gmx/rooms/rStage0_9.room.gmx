@@ -60,7 +60,8 @@
     <instance objName="objBlock" x="704" y="320" name="inst_4C61D3BA" locked="0" code="" scaleX="3" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_flyingDemon" x="416" y="448" name="inst_148FB04D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWarp" x="800" y="384" name="inst_964F6A4A" locked="0" code="image_yscale = 4;&#xA;roomTo = rStage0_10;&#xA;warpX = 8;&#xA;warpY = -1;&#xA;roomwarp = 1;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="QmapRoomSetting" x="0" y="0" name="inst_40A10CC7" locked="0" code="myX=11&#xA;myY=14&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="QmapRoomSetting" x="0" y="-32" name="inst_40A10CC7" locked="0" code="myX=11&#xA;myY=14&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_patrolArea" x="384" y="416" name="inst_CCA1F33D" locked="0" code="pathX[0] = 416; pathY[0] = 448;&#xA;pathX[1] = 512; pathY[1] = 352;&#xA;pathX[2] = 544; pathY[2] = 480;&#xA;pathX[3] = 416; pathY[3] = 448;&#xA;pathX[4] = 320; pathY[4] = 352;&#xA;pathX[5] = 288; pathY[5] = 480;&#xA;pathX[6] = 416; pathY[6] = 448;&#xA;patrolPath = scrCreatePatrolPath(pathX,pathY,1, 100);" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="qS0Tile" x="0" y="352" w="32" h="32" xo="704" yo="256" id="10142424" name="inst_E861601B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
