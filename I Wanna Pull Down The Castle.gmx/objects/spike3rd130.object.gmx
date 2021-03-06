@@ -29,7 +29,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>6</string>
+            <string>1</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -57,8 +57,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0]=250;
-alarm[1]=275;
+            <string>alarm[0]=350;
+alarm[1]=375;
 </string>
           </argument>
         </arguments>

@@ -958,6 +958,7 @@
           <sprite>sprites\sprSP00SpikeLeft</sprite>
         </sprites>
         <sprites name="Blocks">
+          <sprite>sprites\sprSP00Block</sprite>
           <sprite>sprites\sprSP01Block</sprite>
           <sprite>sprites\sprSP02KillerBlock</sprite>
           <sprite>sprites\sprSP04Block</sprite>
@@ -1763,6 +1764,7 @@
     <objects name="QObj">
       <objects name="QMap">
         <object>objects\QmapFollowCan</object>
+        <object>objects\QCameraWithoutMiniMap</object>
         <object>objects\QmapRoomSetting</object>
       </objects>
       <objects name="QMonster">
@@ -2767,6 +2769,7 @@
           <object>objects\spike3rd160_trg</object>
         </objects>
         <objects name="Blocks">
+          <object>objects\objSP00Block</object>
           <object>objects\objSP01Block</object>
           <object>objects\objSP02block3rd12</object>
           <object>objects\objSP02block3rd13</object>
