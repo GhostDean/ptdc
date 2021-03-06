@@ -57,8 +57,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0]=350;
-alarm[1]=375;
+            <string>alarm[0]=250;
+alarm[1]=275;
 </string>
           </argument>
         </arguments>
