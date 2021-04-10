@@ -147,6 +147,9 @@
       <sound>sound\bgm2</sound>
       <sound>sound\sndInit</sound>
     </sounds>
+    <sounds name="SavePeach">
+      <sound>sound\sound177_door_open</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="world">
@@ -965,6 +968,24 @@
         </sprites>
         <sprites name="Killers">
           <sprite>sprites\sprCherryAzure</sprite>
+        </sprites>
+        <sprites name="Doors">
+          <sprite>sprites\sprSPDoorLeft1</sprite>
+          <sprite>sprites\sprSPDoorRight1</sprite>
+          <sprite>sprites\sprite463_door1_1</sprite>
+          <sprite>sprites\doortest</sprite>
+          <sprite>sprites\doorpurple</sprite>
+          <sprite>sprites\doorpurple2</sprite>
+          <sprite>sprites\door2</sprite>
+          <sprite>sprites\sprite464</sprite>
+          <sprite>sprites\sprite470_door1_2</sprite>
+          <sprite>sprites\sprite472</sprite>
+          <sprite>sprites\sprite471_door1_3</sprite>
+          <sprite>sprites\sprite473</sprite>
+          <sprite>sprites\sprite547_door1_4</sprite>
+          <sprite>sprites\sprite1016_Gameboy_Advance___Metroid_Fusion___Background_Objects</sprite>
+          <sprite>sprites\sprite1017</sprite>
+          <sprite>sprites\sprite686</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -2784,6 +2805,12 @@
           <object>objects\apple3rd2</object>
           <object>objects\apple3rd3</object>
         </objects>
+        <objects name="Doors">
+          <object>objects\objSPDoorLeft1</object>
+          <object>objects\objSPDoorRight1</object>
+          <object>objects\objSPDoorLeft2_1</object>
+          <object>objects\objSPDoorRight2_1</object>
+        </objects>
       </objects>
     </objects>
     <objects name="Stage9">
@@ -3123,6 +3150,8 @@
         <room>rooms\rSP05</room>
         <room>rooms\rSP06</room>
         <room>rooms\rSP07</room>
+        <room>rooms\rSP08</room>
+        <room>rooms\rSP09</room>
       </rooms>
     </rooms>
     <rooms name="rStage9">
