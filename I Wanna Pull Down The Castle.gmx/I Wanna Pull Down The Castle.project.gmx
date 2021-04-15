@@ -972,20 +972,22 @@
         <sprites name="Doors">
           <sprite>sprites\sprSPDoorLeft1</sprite>
           <sprite>sprites\sprSPDoorRight1</sprite>
-          <sprite>sprites\sprite463_door1_1</sprite>
-          <sprite>sprites\doortest</sprite>
-          <sprite>sprites\doorpurple</sprite>
-          <sprite>sprites\doorpurple2</sprite>
-          <sprite>sprites\door2</sprite>
-          <sprite>sprites\sprite464</sprite>
-          <sprite>sprites\sprite470_door1_2</sprite>
-          <sprite>sprites\sprite472</sprite>
-          <sprite>sprites\sprite471_door1_3</sprite>
-          <sprite>sprites\sprite473</sprite>
-          <sprite>sprites\sprite547_door1_4</sprite>
-          <sprite>sprites\sprite1016_Gameboy_Advance___Metroid_Fusion___Background_Objects</sprite>
-          <sprite>sprites\sprite1017</sprite>
-          <sprite>sprites\sprite686</sprite>
+          <sprite>sprites\sprSPDoorWhiteLeft</sprite>
+          <sprite>sprites\sprSPDoorWhiteRight</sprite>
+          <sprite>sprites\sprSPDoorGreenLeft</sprite>
+          <sprite>sprites\sprSPDoorGreenRight</sprite>
+          <sprite>sprites\sprSPDoorBlueLeft</sprite>
+          <sprite>sprites\sprSPDoorBlueRight</sprite>
+          <sprite>sprites\sprSPDoorPurpleLeft</sprite>
+          <sprite>sprites\sprSPDoorPurpleRight</sprite>
+          <sprite>sprites\sprSPDoorRedLeft</sprite>
+          <sprite>sprites\sprSPDoorRedRight</sprite>
+          <sprite>sprites\sprSPDoorYellowLeft</sprite>
+          <sprite>sprites\sprSPDoorYellowRight</sprite>
+        </sprites>
+        <sprites name="Effects">
+          <sprite>sprites\sprSPSnow</sprite>
+          <sprite>sprites\sprSPGear</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -1257,6 +1259,7 @@
         <background>background\bgSPTiles04</background>
         <background>background\bgSPTiles00</background>
         <background>background\bgSP00</background>
+        <background>background\bgSPSnow</background>
       </backgrounds>
     </backgrounds>
     <background>background\bgDemoThanks</background>
@@ -2808,8 +2811,23 @@
         <objects name="Doors">
           <object>objects\objSPDoorLeft1</object>
           <object>objects\objSPDoorRight1</object>
-          <object>objects\objSPDoorLeft2_1</object>
-          <object>objects\objSPDoorRight2_1</object>
+          <object>objects\objSPDoorLeftGreen</object>
+          <object>objects\objSPDoorRightGreen</object>
+          <object>objects\objSPDoorLeftWhite</object>
+          <object>objects\objSPDoorRightWhite</object>
+          <object>objects\objSPDoorLeftBlue</object>
+          <object>objects\objSPDoorRightBlue</object>
+          <object>objects\objSPDoorLeftPurple</object>
+          <object>objects\objSPDoorRightPurple</object>
+          <object>objects\objSPDoorLeftRed</object>
+          <object>objects\objSPDoorRightRed</object>
+          <object>objects\objSPDoorLeftYellow</object>
+          <object>objects\objSPDoorRightYellow</object>
+        </objects>
+        <objects name="Effects">
+          <object>objects\objSPSnowMaker</object>
+          <object>objects\objSPSnow</object>
+          <object>objects\objSPTimePause</object>
         </objects>
       </objects>
     </objects>
@@ -3152,6 +3170,7 @@
         <room>rooms\rSP07</room>
         <room>rooms\rSP08</room>
         <room>rooms\rSP09</room>
+        <room>rooms\rSP10</room>
       </rooms>
     </rooms>
     <rooms name="rStage9">

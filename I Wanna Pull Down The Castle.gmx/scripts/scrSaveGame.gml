@@ -122,3 +122,18 @@ else    //use text file
 
 //destroy the map
 ds_map_destroy(saveMap);
+
+// add sp stage file
+for (var i = 1; i <= global.frees1Num; i++)
+{
+    global.saveFrees1[i] = global.frees1[i];
+}
+for (var i = 1; i <= global.frees2Num; i++)
+{
+    global.saveFrees1[i] = global.frees1[i];
+}
+for (var i = 1; i <= global.frees3Num; i++)
+{
+    global.saveFrees1[i] = global.frees1[i];
+}
+

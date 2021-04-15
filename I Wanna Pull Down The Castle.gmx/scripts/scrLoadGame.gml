@@ -140,6 +140,20 @@ for (var i = 0; i < global.bossItemTotal; i++)
     global.bossItem[i] = global.saveBossItem[i];
 }
 
+// add sp stage file
+for (var i = 1; i <= global.frees1Num; i++)
+{
+    global.frees1[i] = global.saveFrees1[i];
+}
+for (var i = 1; i <= global.frees2Num; i++)
+{
+    global.frees2[i] = global.saveFrees2[i];
+}
+for (var i = 1; i <= global.frees3Num; i++)
+{
+    global.frees3[i] = global.saveFrees3[i];
+}
+
 global.gameClear = global.saveGameClear;
 if(isFEZroom(asset_get_index(global.saveRoom))){
     instance_create(global.savePlayerX,global.savePlayerY,player);

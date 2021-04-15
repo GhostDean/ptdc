@@ -4,7 +4,7 @@
   <width>2400</width>
   <height>1824</height>
   <vsnap>16</vsnap>
-  <hsnap>32</hsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -118,8 +118,8 @@
     <instance objName="objBlock" x="1440" y="608" name="inst_4BAC96E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1472" y="608" name="inst_D9486480" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1504" y="608" name="inst_69E081E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objWarp" x="768" y="736" name="inst_206E2A34" locked="0" code="image_yscale = 2;&#xA;roomTo = rSP08;&#xA;warpX = 1592;&#xA;warpY = 0;&#xA;roomwarp = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objWarp" x="1600" y="672" name="inst_A66A0420" locked="0" code="image_yscale = 4;&#xA;roomTo = rSP07;&#xA;warpX = 808;&#xA;warpY = 0;&#xA;roomwarp = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWarp" x="768" y="736" name="inst_206E2A34" locked="0" code="image_yscale = 4;&#xA;roomTo = rSP08;&#xA;warpX = 1592;&#xA;warpY = 0;&#xA;roomwarp = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWarp" x="1600" y="672" name="inst_A66A0420" locked="0" code="image_yscale = 4;&#xA;roomTo = rSP10;&#xA;warpX = 808;&#xA;warpY = 0;&#xA;roomwarp = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlayerStart" x="832" y="832" name="inst_847FED41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="832" y="1152" name="inst_E4729467" locked="0" code="" scaleX="23" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1568" y="992" name="inst_84A2655E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -265,6 +265,8 @@
     <instance objName="objSP04SpikeLeft" x="1504" y="864" name="inst_0927C44B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSP04SpikeLeft" x="1504" y="832" name="inst_1DC7F2DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSP04SpikeLeft" x="1472" y="848" name="inst_F0A71863" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSPDoorLeft1" x="1584" y="672" name="inst_C2D7D2A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSPDoorLeftBlue" x="1568" y="672" name="inst_B16B9F5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bgSPTiles04" x="800" y="608" w="32" h="32" xo="0" yo="0" id="10073616" name="tile_D856BC72" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

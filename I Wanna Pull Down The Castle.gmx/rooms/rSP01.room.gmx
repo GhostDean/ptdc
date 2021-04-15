@@ -197,7 +197,7 @@
     <instance objName="objWarp" x="-32" y="416" name="inst_FF87D999" locked="0" code="image_yscale = 4;&#xA;roomTo = rSP00;&#xA;warpX = 2352;&#xA;warpY = -1;&#xA;roomwarp = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="QCameraWithoutMiniMap" x="-32" y="0" name="inst_CA85105B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSPDoorLeft1" x="-32" y="416" name="inst_09863A17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSPDoorRight2_1" x="16" y="416" name="inst_05C298E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSPDoorRightGreen" x="16" y="416" name="inst_6A6C4CA4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bgSPTiles01" x="0" y="0" w="32" h="32" xo="0" yo="0" id="10174862" name="inst_D6EB34E9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -101,4 +101,41 @@ global.s7UnlockDoor = false;
 global.s4WaterCutscene = false;
 global.s5IMTutorial = false;
 
+// sp stage global var
+global.frees1Num = 8;
+global.frees2Num = 8;
+global.frees3Num = 8;
+for (var i = 1; i <= global.frees1Num; i++)
+{
+    global.frees1[i] = 0;
+    global.saveFrees1[i] = 0;
+}
+for (var i = 1; i <= global.frees2Num; i++)
+{
+    global.frees2[i] = 0;
+    global.saveFrees2[i] = 0;
+}
+for (var i = 1; i <= global.frees3Num; i++)
+{
+    global.frees3[i] = 0;
+    global.saveFrees3[i] = 0;
+}
+/*
+// origin gm8 sp stage global
+global.frees1[5]; //five color
+global.frees1[6]; //area1boss
+global.frees1[7]; //white block
+global.frees1[8]; //hot clothes
+global.frees2[1]; //normalbomb
+global.frees2[2]; //area2boss
+global.frees2[3]; //waterdeep
+global.frees2[4]; //watercol
+global.frees2[5]; //jumpjumpjump
+global.frees2[6]; //timepause in area 5(0 is move)
+global.frees2[7]; //purple door
+global.frees2[8]; //global.daodannum2
+global.frees3[1]; //supermario P=1,2,3,4
+global.frees3[2]; //supermario ?=1,2,3,4
+*/
+
 randomize();    //make sure the game starts with a random seed for RNG
