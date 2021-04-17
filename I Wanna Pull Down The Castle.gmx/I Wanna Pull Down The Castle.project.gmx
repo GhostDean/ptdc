@@ -959,12 +959,23 @@
           <sprite>sprites\sprSP00SpikeRight</sprite>
           <sprite>sprites\sprSP00SpikeDown</sprite>
           <sprite>sprites\sprSP00SpikeLeft</sprite>
+          <sprite>sprites\sprSP10SpikeUp</sprite>
+          <sprite>sprites\sprSP10SpikeRight</sprite>
+          <sprite>sprites\sprSP10SpikeDown</sprite>
+          <sprite>sprites\sprSP10SpikeLeft</sprite>
+          <sprite>sprites\sprSP10SpikeSpec</sprite>
+        </sprites>
+        <sprites name="Platforms">
+          <sprite>sprites\sprSP10MovingPlatform</sprite>
         </sprites>
         <sprites name="Blocks">
           <sprite>sprites\sprSP00Block</sprite>
           <sprite>sprites\sprSP01Block</sprite>
           <sprite>sprites\sprSP02KillerBlock</sprite>
           <sprite>sprites\sprSP04Block</sprite>
+          <sprite>sprites\sprSP10SpecialBlock_1</sprite>
+          <sprite>sprites\sprSP10SpecialBlock_2</sprite>
+          <sprite>sprites\sprSP10SpecialBlock_3</sprite>
         </sprites>
         <sprites name="Killers">
           <sprite>sprites\sprCherryAzure</sprite>
@@ -1260,6 +1271,8 @@
         <background>background\bgSPTiles00</background>
         <background>background\bgSP00</background>
         <background>background\bgSPSnow</background>
+        <background>background\bgSPTiles10</background>
+        <background>background\bgSPTiles10_2</background>
       </backgrounds>
     </backgrounds>
     <background>background\bgDemoThanks</background>
@@ -2762,6 +2775,21 @@
           <object>objects\objSP00SpikeRight</object>
           <object>objects\objSP00SpikeDown</object>
           <object>objects\objSP00SpikeLeft</object>
+          <object>objects\objSP10SpikeUp</object>
+          <object>objects\objSP10SpikeRight</object>
+          <object>objects\objSP10SpikeDown</object>
+          <object>objects\objSP10SpikeLeft</object>
+          <objects name="s7trapspikes">
+            <object>objects\objSP10SpikeDownTri</object>
+            <object>objects\spike7th0</object>
+            <object>objects\spike7th6</object>
+            <object>objects\spike7th7</object>
+            <object>objects\spike7th8</object>
+            <object>objects\spike7th9</object>
+          </objects>
+        </objects>
+        <objects name="Platforms">
+          <object>objects\objSP10MovingPlatform</object>
         </objects>
         <objects name="Triggers">
           <object>objects\objSP01Trigger1</object>
@@ -2791,6 +2819,7 @@
           <object>objects\spike3rd148_trg</object>
           <object>objects\spike3rd151_trg</object>
           <object>objects\spike3rd160_trg</object>
+          <object>objects\objSP10SpikeDownTrigger</object>
         </objects>
         <objects name="Blocks">
           <object>objects\objSP00Block</object>
@@ -2801,6 +2830,8 @@
           <object>objects\objSP02block3rd15</object>
           <object>objects\objSP02block3rd16</object>
           <object>objects\block3rd23</object>
+          <object>objects\block7th1</object>
+          <object>objects\block7th2</object>
         </objects>
         <objects name="Killers">
           <object>objects\apple3rd1</object>

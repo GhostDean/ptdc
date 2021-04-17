@@ -118,8 +118,8 @@
     <instance objName="objBlock" x="1440" y="608" name="inst_4BAC96E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1472" y="608" name="inst_D9486480" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1504" y="608" name="inst_69E081E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objWarp" x="768" y="736" name="inst_206E2A34" locked="0" code="image_yscale = 4;&#xA;roomTo = rSP08;&#xA;warpX = 1592;&#xA;warpY = 0;&#xA;roomwarp = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objWarp" x="1600" y="672" name="inst_A66A0420" locked="0" code="image_yscale = 4;&#xA;roomTo = rSP10;&#xA;warpX = 808;&#xA;warpY = 0;&#xA;roomwarp = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWarp" x="768" y="736" name="inst_206E2A34" locked="0" code="image_yscale = 4;&#xA;roomTo = rSP08;&#xA;warpX = 1592;&#xA;warpY = 0;&#xA;roomwarp = 0;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWarp" x="1600" y="672" name="inst_A66A0420" locked="0" code="image_yscale = 4;&#xA;roomTo = rSP10;&#xA;warpX = 808;&#xA;warpY = 0;&#xA;roomwarp = 0;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlayerStart" x="832" y="832" name="inst_847FED41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="832" y="1152" name="inst_E4729467" locked="0" code="" scaleX="23" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="1568" y="992" name="inst_84A2655E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -482,6 +482,16 @@
     <tile bgName="bgSPTiles04" x="864" y="864" w="32" h="32" xo="0" yo="0" id="10180851" name="inst_F7381B58" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bgSPTiles04" x="864" y="896" w="32" h="32" xo="0" yo="0" id="10180852" name="inst_E5AAB5DD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bgSPTiles04" x="1216" y="704" w="32" h="32" xo="0" yo="0" id="10180855" name="inst_2D317AC3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgSPTiles10" x="1568" y="608" w="32" h="32" xo="64" yo="0" id="10180862" name="inst_41AC26CD" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgSPTiles10" x="1536" y="608" w="32" h="32" xo="32" yo="0" id="10180863" name="inst_43055634" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgSPTiles10" x="1504" y="608" w="32" h="32" xo="0" yo="0" id="10180864" name="inst_7270AEE8" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgSPTiles10" x="1504" y="640" w="32" h="32" xo="0" yo="64" id="10180865" name="inst_E9EF332D" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgSPTiles10" x="1536" y="640" w="32" h="32" xo="32" yo="64" id="10180866" name="inst_43FB7060" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgSPTiles10" x="1568" y="640" w="32" h="32" xo="64" yo="64" id="10180867" name="inst_849EBB34" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgSPTiles10" x="1536" y="800" w="32" h="32" xo="0" yo="0" id="10180868" name="inst_7049F24F" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgSPTiles10" x="1536" y="832" w="32" h="32" xo="0" yo="64" id="10180869" name="inst_55531029" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgSPTiles10" x="1568" y="800" w="32" h="32" xo="64" yo="0" id="10180871" name="inst_7AD37D04" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="bgSPTiles10" x="1568" y="832" w="32" h="32" xo="64" yo="64" id="10180872" name="inst_155FBF97" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bgSPTiles04" x="1472" y="960" w="32" h="32" xo="0" yo="0" id="10180853" name="inst_12B9A29C" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bgSPTiles04" x="1152" y="640" w="32" h="32" xo="0" yo="0" id="10180854" name="inst_ECDD95BA" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
