@@ -57,7 +57,7 @@
     <instance objName="objBlock" x="1056" y="1088" name="inst_4932FD3C" locked="0" code="" scaleX="23" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objBlock" x="928" y="1024" name="inst_B0C6EA3C" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objWarp" x="768" y="672" name="inst_206E2A34" locked="0" code="image_yscale = 4;&#xA;roomTo = rSP09;&#xA;warpX = 1592;&#xA;warpY = 0;&#xA;roomwarp = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objWarp" x="2400" y="1152" name="inst_A66A0420" locked="0" code="image_yscale = 2;&#xA;roomTo = rSP05;&#xA;warpX = 808;&#xA;warpY = 0;&#xA;roomwarp = 0;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWarp" x="2400" y="1152" name="inst_A66A0420" locked="0" code="image_yscale = 1;&#xA;roomTo = rSP11;&#xA;warpX = 808;&#xA;warpY = 0;&#xA;roomwarp = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlayerStart" x="864" y="1024" name="inst_847FED41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSave" x="864" y="1056" name="inst_5E9DD853" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSPDoorRight1" x="768" y="672" name="inst_BD16F908" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

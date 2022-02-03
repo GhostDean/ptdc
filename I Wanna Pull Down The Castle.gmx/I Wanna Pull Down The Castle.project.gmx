@@ -3202,6 +3202,8 @@
         <room>rooms\rSP08</room>
         <room>rooms\rSP09</room>
         <room>rooms\rSP10</room>
+        <room>rooms\rSP11</room>
+        <room>rooms\rSP12</room>
       </rooms>
     </rooms>
     <rooms name="rStage9">
